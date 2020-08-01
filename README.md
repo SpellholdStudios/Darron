@@ -21,6 +21,25 @@ This mod adds Darron, a new merchant who sells new objects created especially fo
 
 ## <a name="versions" id="versions"></a>Version History
 
+##### Version 2.0.0 (August, 2020)
+
+- TODO Added *darron.ini* metadata file to support AL|EN's "Project Infinity".
+- Renamed *Setup-DARRON.tp2* -> *darron.tp2* and moved it to top mod folder to support AL|EN's "Project Infinity".
+- TODO Replaced `AUTHOR` keyword with `SUPPORT`.
+- Added `HANDLE_CHARSETS` function to convert string entries for EE games
+- Added `REQUIRE_PREDICATE` conditions to avoid installing the mod in inaccurate games.
+- Added component `DESIGNATED` number and "*darron*" `LABEL`.
+- TODO Added native BG2:EE and EET compatibility.
+- ...
+- ...
+- TODO Added foreign languages WeiDU prompts whenever possible.
+- TODO Updated .tra files for compatibility with GW_UPDATE_ITM_DESCRIPTION_TO_EE WeiDU function requirements which automatically removes usability restrictions for EE games.
+- TODO Updated and renamed readme files to *darron-readme-%LANGUAGE%.txt*, then moved them into new "*readme*" folder.
+- Reorganized mod architecture tree: created or renamed folders to sort files according to their types.
+- TODO Included Linux and Mac Os X versions in the same package (thanks AL|EN's Infinity Auto Packager tool!).
+- Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
+- Uploaded mod to official Spellhold Studios GitHub mirror account.
+
 ## 
 
 ##### Version 1.6 (August 31, 2011)

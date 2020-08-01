@@ -3,7 +3,28 @@ AUTHOR ~Drizzt905@hotmail.com~
 
 VERSION ~v1.6~
 
-AUTO_TRA ~darron/lang//%s~
+ALWAYS
+
+	/* --------------------------------------------------------------------------------------------- *
+	 *    Convert strings to UTF-8 for BGEE/BG2EE                                                    *
+	 *    No exception, everything needs to be converted                                             *
+	 *    setup.tra contains in game texts as well as installation texts and needs to be converted   *
+	 * --------------------------------------------------------------------------------------------- */
+	ACTION_DEFINE_ARRAY cr_reload BEGIN setup END
+		// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
+	ACTION_DEFINE_ARRAY cr_noconvert BEGIN END
+	LAF HANDLE_CHARSETS
+		INT_VAR
+			infer_charsets = 1
+		STR_VAR
+			tra_path = EVAL ~%MOD_FOLDER%/tra~
+			noconvert_array = cr_noconvert
+			reload_array = cr_reload
+	END
+
+END
+
+AUTO_TRA ~darron/lang/%s~
 
 LANGUAGE ~Espanol (por Eslizon)~
          ~spanish~
@@ -22,7 +43,12 @@ LANGUAGE ~Deutsch~
 		 ~darron/lang/german/setup.tra~
 		 
 		 
+/* ======================= *
+ *         Darron          *
+ * ======================= */
 BEGIN @0
+DESIGNATED 0 LABEL "darron"
+REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ //@1	// ~You must have BG2, ToB, BGT, BG2:EE or EET installed to install Bolsa mod.~
 
 COPY ~darron/ITEM/ESLIRIN0.ITM~ ~override\ESLIRIN0.itm~
 SAY NAME1 @1

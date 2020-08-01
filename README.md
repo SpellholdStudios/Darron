@@ -35,9 +35,12 @@ This mod adds Darron, a new merchant who sells new objects created especially fo
 - TODO Added foreign languages WeiDU prompts whenever possible.
 - TODO Updated .tra files for compatibility with GW_UPDATE_ITM_DESCRIPTION_TO_EE WeiDU function requirements which automatically removes usability restrictions for EE games.
 - TODO Updated and renamed readme files to *darron-readme-%LANGUAGE%.txt*, then moved them into new "*readme*" folder.
+- Removed useless "*backup*" folder.
 - Reorganized mod architecture tree: created or renamed folders to sort files according to their types.
+- Lower cased files.
 - TODO Included Linux and Mac Os X versions in the same package (thanks AL|EN's Infinity Auto Packager tool!).
 - Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
+- Updated WeiDU installer to v246.
 - Uploaded mod to official Spellhold Studios GitHub mirror account.
 
 ## 

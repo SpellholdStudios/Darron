@@ -1,0 +1,56 @@
+Darron para Baldur's Gate 2
+por Eslizon Drizzt905@hotmail.com
+Soporte dado por Clan REO: http://www.clanreo.net/
+
+* Instalación
+--------------
+
+Descomprime el zip donde tengas instalado el juego.
+Ejecuta el exe (Darron.exe) y sigue los pasos de instalación.
+Para desinstalar vuelve a ejecutar el exe y sigue los pasos para su desinstalación.
+
+* Compatibilidades:
+--------------------
+
+Es compatible con cualquier mod. Menos con las conversiones totales como Epic Endeavours.
+
+* Sobre el Mod
+---------------
+
+Darron es el encargado de negociar las mercancías especiales de los ladrones de las sombras. 
+Se encuentra en el sótano de la cofradía de los ladrones en el distrito del puerto (area=AR0307 X=1195 y=1654).
+Para llegar hasta el deberás hacer el pacto con los ladrones y conseguir la llave del sótano.
+Darron vende las siguientes mercancias:
+
+Armadura de aurovórax +2
+Armadura del maestro de los ladrones
+Anillo de resistencia a la electricidad
+Anillo de fácil apertura
+Arco corto +2 de Defensa
+Guantes de robar mayores
+Manto de las Sombras
+Aguijón venenoso +1
+Daga de muerte +2
+Capucha de Serick
+Botas de sigilo mayores
+Botas de serpiente
+La Senda del Maestro Li
+Furia del Dragón Katana +3
+Cofre Dimensional Custodiado (Realizado por Riojano2002)
+
+* Historial de versiones
+-------------------------
+
+Versión 1.6:
+  - Añadida la traducción al alemán
+
+Versión 1.5.1:
+  - Textos revisados
+
+Versión 1.5:
+  - Añadida la traducción al italiano hecha por Ilot
+
+Versión 1.4:
+  - Codificados los textos en archivos .tra
+  - Textos revisados
+  - Añadida la traducción al ingles hecha por Lollorian

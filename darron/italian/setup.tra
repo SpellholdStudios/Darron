@@ -1,0 +1,239 @@
+@0    = ~Darron~
+@1    = ~Anello~
+@2    = ~Anello della Resistenza all'Elettricità~
+@3    = ~Un anello è una piccola fascia di metallo prezioso utilizzata come gioiello. Alcuni anelli rari sono stati incantati e hanno acquisito poteri magici. Questi anelli sono molto ricercati, soprattutto dagli avventurieri.~
+@4    = ~Le origini di questo anello sono sconosciute. Forse fu creato da un mago che cercò di viaggiare nel piano elementale dell'Aria.
+
+STATISTICHE:
+
+Resistenza all'Elettricità: +40%~
+@5    = ~Anello dello scassinare facile ~
+@6    = ~Questo anello fu creato dal capo di una gilda di ladri i cui membri erano molto maldestri. Grazie ai magici poteri di questo anello qualsiasi serratura sarà più facile da aprire.
+
+STATISTICHE:
+
+Abilità Speciale: Scassinare serrature tre volte al giorno.~
+@7    = ~Corazza di cuoio~
+@8    = ~Armatura di Aurumvorax +2~
+@9    = ~La Corazza di cuoio, contrariamente a quanto si crede, non utilizza cuoio morbido e flessibile come quello per gli stivali dei ranger o gli abiti dei druidi, perché quel tipo di cuoio non offre protezione migliore dei semplici abiti.
+
+STATISTICHE:
+
+Classe Armatura: 8
+Peso: 15
+Non utilizzabile da:
+  Mago~
+@10    = ~Si crede che questa armatura dalla tonalità dorata sia stata fatta con la pelle di un feroce Aurumvorax, una bestia vorace con sei gambe che si ciba non solo di carne ma anche di metalli preziosi come l'oro. L'alimentazione della creatura dà alla sua pelle un aspetto raffinato e con incredibili qualità protettive, qualità che gli consentono anche la resistenza a certe armi.
+
+STATISTICHE:
+
+Bonus alla Classe Armatura: +3 contro le armi taglienti
+Bonus alla Classe Armatura: +3 contro le armi perforanti
+Classe Armatura: 6
+Peso: 5
+Non utilizzabile da:
+  Mago~
+@11    = ~Armatura del Maestro dei Ladri~
+@12    = ~Le origini di questa armatura si perdono nella notte dei tempi. Per anni i capi delle più importanti gilde di ladri hanno combattuto per accaparrarsi questa armatura poiché si dice che chi la possiederà diventerà il miglior ladro di tutti i tempi e si potrà fregiare del titolo di Maestro dei Ladri.
+
+STATISTICHE:
+
+Classe Armatura: 4
++2 di Bonus alla Destrezza
+Speciale: +75% a Nascondersi nelle ombre
+Peso: 8
+Utilizzabile da:
+  Ladro (singola, duale, multiclasse)~
+@13    = ~Arco Corto~
+@14    = ~Arco Corto +2 di Difesa~
+@15    = ~Quando furono creati i primi archi corti non avevano questo nome. Oggigiorno questo termine si riferisce a ogni arma di questo tipo che non è un arco lungo. Le aste degli archi corti hanno una lunghezza media di 15 centimetri. Con il trascorrere degli anni si è cercato di aumentare la gittata degli archi aumentandone la flessibilità senza cambiare la sua lunghezza. Giungendo, in questo caso, alla creazione dell'arco lungo.
+
+STATISTICHE:
+
+Danno:
+Peso: 2
+Fattore velocità: 6
+Tipo di competenza: Arco corto
+Non utilizzabile da:
+  Druido
+  Chierico
+  Mago~
+@16    = ~Questo arco fu creato per compensare la mancanza dello scudo quando si usa l'arco. Chi lo impugna ottiene un piccolo bonus al tiro salvezza.
+
+STATISTICHE:
+
+Speciale: +1 al tiro salvezza per l'armatura.
+THAC0: +2
+Peso: 2
+Fattore velocità: 5
+Tipo di competenza: Arco corto
+Tipo: a due mani
+Non utilizzabile da:
+  Druido
+  Chierico
+  Mago~
+@17    = ~Bracciali~
+@18    = ~Guanti del Borseggiatore Veterano~
+@19    = ~I bracciali sono spesse fasce di metallo o cuoio che vengono fissate, allacciate o legate all'avambraccio di un personaggio. Di solito la magia che viene instillata nei bracciali è valida solo durante un combattimento, in quanto la maggior parte dei bracciali serve a proteggere colui che li indossa dalle ferite o a migliorare le probabilità di colpire un nemico. Esistono tuttavia delle eccezioni, anche se tali oggetti sono più che rari.~
+@20    = ~Questi guanti appartenevano al grande ladro Urank di Baldur's Gate. Dopo aver accumulato una grande fortuna e divenuto un mercante, giurò di non rubare più, vendendo i suoi guanti speciali per evitare la tentazione di rubare ancora. Dopo un pò di tempo i suoi affari andarono male e lui andò in rovina.
+
+STATISTICHE:
+
+Svuotare tasche: +40%~
+@21    = ~Mantello~
+@22    = ~Mantello delle Ombre~
+@23    = ~Il mantello può avere qualsiasi forma ed essere di qualsiasi tipo di stoffa. Le forme più comuni sono un pezzo circolare di tessuto con un foro per la testa e tessuto drappeggiato attorno al collo legato da una catenella, una spilla, una cordicella o spilli.~
+@24    = ~Il Mantello delle Ombre fu creato per farlo utilizzare dai Maestri dei Ladri Tenebrosi di Amn. I Maestri dei Ladri Tenebrosi sono l'ordine più alto all'interno della gerarchia dei Ladri Tenebrosi.
+
+Speciale: +40% Nascondersi nelle ombre
+Utilizzabile da:
+  Ladro (singolo, duale, o multiclasse)~
+@25    = ~Pugnale~
+@26    = ~Pugnale +1: l'Aculeo dello Scorpione~
+@27    = ~Il pugnale ha in genere una lama appuntita e a doppio taglio, al contrario del coltello, che ha la lama affilata solo da un lato ed è più corto del pugnale.
+
+STATISTICHE:
+
+Danno: 1D4
+Tipo di danno: Perforante
+Peso: 1
+Fattore velocità: 2
+Tipo di competenza: Pugnale
+Non utilizzabile da:
+  Chierico~
+@28    = ~Questo pugnale é stato creato con l'aculeo di un piccolo scorpione, poiché gli scorpioni piccoli hanno il veleno molto più letale degli scorpioni adulti. Il veleno nella lama si espande rapidamente nel corpo della vittima appena dopo il primo colpo andato a buon fine.
+
+STATISTICHE:
+
+Danno: 1D4 + 1
+Danno da veleno: 2 punti did anno al secondo
+Durata del veleno: 10 secondi
+THAC0: +1 bonus
+Tipo di danno: Perforante
+Peso: 1
+Fattore velocità: 1
+Tipo di competenza: Pugnale
+Non utilizzabile da:
+  Chierico~
+@29    = ~Pugnale +2: il Pugnale della Morte~
+@30    = ~Questo pugnale fu creato da un mago malvagio, che lo incantò con terribili incantesimi di morte per utilizzarlo come arma personale. Purtroppo trovò lui stesso la morte per mano del pugnale, pungendosi accidentalmente il dito mentre stava utilizzando il pugnale per aprire una lettera.
+
+STATISTICHE:
+
+Capacità di combattimento:
+  20% ad ogni colpo la vittima deve fare un tiro salvezza contro morte magica (con una penalità di -3) o morire all'istante.
+Danno: 1D4+2
+THAC0: +2 bonus
+Peso: 1
+Fattore velocità: 0
+Tipo di competenza: Pugnale
+Tipo: ad una mano
+Non utilizzabile da:
+  Chierico~
+@31    = ~Cappuccio~
+@32    = ~Cappuccio di Serick~
+@33    = ~Un semplice cappuccio da ladro, utile per coprire il viso e non farsi notare passando inosservato.~
+@34    = ~Serick era un celebre ladro che aveva molti nemici. Era un invincibile guerriero senza rivali in battaglia. I suoi nemici cercarono, quindi, sempre di colpirlo alle spalle. Ma per qualche strano motivo fallivano sempre.
+
+STATISTICHE:
+
+Colui che lo indossa è immune al colpo alle spalle.
+Peso: 1
+Utilizzabile da:
+  Ladro (singolo, duale, o multiclasse)~
+@35    = ~Stivali~
+@36    = ~Stivali Silenziosi del Veterano~
+@37    = ~Gli stivali vengono di solito fatti a mano dai ciabattini. Gli stivali comuni sono fatti utilizzando un'unica forma, ma quelli di buona qualità sono fatti su misura per il piede di chi li indosserà.
+
+STATISTICHE:
+
+Peso: 4~
+@38    = ~La furtività é la migliore arma per la maggior parte dei ladri. Per questo motivo i ladri hanno creato molti oggetti magici per migliorare questo aspetto. Questi stivali, però, non furono originariamente creati per un ladro, ma per un nobile che voleva spiare la moglie infedele. Fu assassinato dall'amante di sua moglie e da allora di questi stivali si persero le tracce. Alcuni sostengono che quell'amante era proprio Darron e che gli stivali li prese lui.
+
+STATISTICHE:
+
+Bonus al Muoversi silenziosamente: +50%
+Peso: 4~
+@39    = ~Stivali di Serpente~
+@40    = ~Questi stivali di serpente sono fatti con la pelle consacrata di serpente. Provenienti da terre lontane, sono molto apprezzati da molti nobili in quanto portandoli si evita di essere avvelenati, grazie alla magia che questi stivali possiedono.
+
+STATISTICHE:
+
+  Immunità al veleno
+Bonus alla Classe Armatura: +1 contro le armi perforanti
+Peso: 4~
+@41    = ~Katana~
+@42    = ~La Via del Maestro Li~
+@43    = ~La katana è una spada leggermente curva, ad un filo, che termina con una parte appuntita. La katana è forse una delle migliore spade mai fatte, le tappe per la sua creazione sono un lungo e segreto processo, più una forma di arte che altro. Questa spada è un'importante sfaccettatura della cultura Kara-Tur. Toccare o maneggiare la katana di un samurai vuol dire insultarlo o stimolare la sua collera. Per un gaijin, o straniero, avere questa spada è un raro evento. Il gaijin può essere un grande ed onorato amico di un importante ministro oppure ha ucciso un samurai.
+
+STATISTICHE:
+
+Danno: 1D10
+Tipo di danno: tagliente
+Peso: 6
+Fattore velocità: 4
+Tipo di competenza: Katana
+Tipo: ad una mano
+Non utilizzabile da:
+  Druido
+  Mago
+  Chierico~
+@44    = ~Un tempo si credeva che esisteva solo un esemplare che provasse la maestria di questo maestro artigiano, ma ora si sa che diverse di queste katane furono imbarcate su una nave che si incagliò lungo la Costa della Spada alcuni anni fa. Tutte le katane portavano il sigillo del Maestro Hu Li, il grande artigiano dell'Est, ma poco altro si conosce di lui.
+
+STATISTICHE:
+
+THAC0: +2
+Danno: 1d10+2 +2 punti al danno da acido.
+Tipo di danno: tagliente
+Peso: 4
+Fattore velocità: 1
+Tipo di competenza: Katana
+Tipo: ad una mano
+Non utilizzabile da:
+  Druido
+  Chierico
+  Mago~
+@45    = ~Katana +3 Furia del Drago~
+@46    = ~Benché apparentemente sembri una spada normale, questa katana è stata in grado di uccidere un terribile drago. L'anima del drago è racchiusa all'interno della spada, dandogli grandi poteri per dominare il fuoco.
+
+STATISTICHE:
+
+Speciale: Può lanciare Palla di Fuoco una volta al giorno.
+THAC0: +3
+Danno: 1d12+3 +6 al danno da fuoco
+Tipo di danno: tagliente
+Peso: 4
+Fattore velocità: 1
+Tipo di competenza: Katana
+Tipo: ad una mano
+Non utilizzabile da:
+  Druido
+  Chierico
+  Mago~
+@47    = ~Forziere Dimensionale Custodito~
+@48    = ~Forziere Dimensionale Custodito
+(Evocazione/Attrazione, Invocazione/Apparizione)
+Livello: 7
+Raggio: Illimitato
+Durata: Speciale
+Tempo di Lancio: 9
+Area d'effetto: Speciale
+Tiro salvezza: Speciale
+
+Questo incantesimo é una versione avanzata dell'incantesimo "Forziere Dimensionale". Fondamentalmente le funzioni dell'incantesimo sono simili ma incorpora un guardiano planare affinché custodisca lo scrigno nella sua locazione tra i piani, evitando che sia saccheggiato ed esaminato dalle creature native dei vari piani.
+
+Quando l'incantesimo viene lanciato, si invocherà il Guardiano del Forziere, che metterà a disposizione il contenuto del Forziere del mago. L'interno di questo forziere é di fatto incorporeo, e quindi può contenere praticamente qualsiasi oggetto si vuole.
+
+Il Guardiano é legato alla volontà del mago, ma non combatterà mentre é nel Primo Piano Materiale, lotterà solamente contro le creature che cercheranno di aprire il forziere. Tuttavia, se è attaccato nel breve tempo che rimane con il mago, si difenderà dall'attacco attaccando a sua volta e dissiperà qualsiasi magia. Se viene distrutto, si ricomporrà vicino al forziere su un altro piano, poiché la sua essenza è legata al forziere e sarà definitivamente distrutto solo quando il forziere sarà distrutto. Un'altra ragione in più che costringe il Guardiano a sorvegliare il tesoro del forziere.~
+@49    = ~Statua~
+@50    = ~Statua del Guardiano~
+@51    = ~Questa statua rappresenta un essere di una grandezza superiore ad un umano. Dalla sua posizione si può capire che si sta facendo strada attraverso un fluido mentre sorregge qualcosa di pesante tra le sue braccia.
+
+La sua utilità é sconosciuta, ma sembra avere a che fare con qualche tipo di potere magico.~
+@52    = ~Questa statua é stata incantata con un incantesimo migliorato di Forziere Dimensionale. Durante l'uso la statua evocherà una creatura chiamata il Guardiano, che ha l'incarico di proteggere un forziere magico.
+
+Questo forziere è fatto con materiali molto preziosi, ma il suo potere é quello di essere in grado di immagazzinare un grande numero di oggetti. Il forziere, si trova in un luogo interplanare, protetto da qualsiasi eventuale furto.
+
+Il mago può evocare dalla sua parte il Guardiano fino a due volte al giorno e in quel momento può accedere e rimuovere gli oggetti all'interno del forziere a suo piacimento.~
+@53    = ~Guardiano~
+

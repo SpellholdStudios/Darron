@@ -1,7 +1,7 @@
 
 ![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/Darron?include_prereleases&color=darkred)<a name="top" id="top"> </a>
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macos%20%7C%20linux&color=informational)
-![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20German%20%7C%20Italian%20%7C%20Spanish&color=limegreen)
+![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German%20%7C%20Italian%20%7C%20Russian%20%7C%20Spanish&color=limegreen)
 
 <div align="center"><h1></a>Darron</h1>
 
@@ -14,6 +14,24 @@ Baldur's Gate Trilogy and EET<h3>
 ## <a name="intro" id="intro"></a>Overview
 
 This mod adds Darron, a new merchant who sells new objects created especially for thieves. You can find him in the cellar of the shadow thieves guild.
+
+
+<hr>
+
+
+## <a name="compat" id="compat"></a>Compatibility
+
+
+<hr>
+
+
+## <a name="installation" id="installation"></a>Installation
+
+
+<hr>
+
+
+## <a name="credits" id="credits"></a>Credits and Acknowledgements
 
 
 <hr>

@@ -6,18 +6,45 @@ VERSION ~v1.6~
 ALWAYS
 
 	/* --------------------------------------------------------------------------------------------- *
+	 *    Determines if the game is an Enhanced Edition.                                             *
+	 * --------------------------------------------------------------------------------------------- */
+	OUTER_SET is_ee = (GAME_IS ~bg2ee eet~) ? 1 : 0					// EE game
+
+	/* ------------------------ *
+	 *    Detects other mods    *
+	 * ------------------------ */
+	OUTER_SET is_1pp_swblbw = ((MOD_IS_INSTALLED ~1pp.tp2~ ~210~) AND (MOD_IS_INSTALLED ~1pp.tp2~ ~400~)) ? 1 : 0	// 1ppv4: Increased paperdoll object variety (core)
+	OUTER_SET is_1pp_400    =  (MOD_IS_INSTALLED ~1pp.tp2~ ~400~) ? 1 : 0											// 1ppv4: Core updates and item patches
+	OUTER_SET is_1pp_switch =  (MOD_IS_INSTALLED ~1pp.tp2~ ~113~) ? 1 : 0											// 1ppv4: Smart Avatar & Armour Switching
+
+	// Detects ToBEx
+	OUTER_SET is_tobex = (FILE_EXISTS ~tobex_ini/tobexcore.ini~) ? 1 : 0
+
+	/* -------------------------------- *
+	 *    Loads macros and functions    *
+	 * -------------------------------- */
+	INCLUDE ~%MOD_FOLDER%/lib/gw_functions.tpa~						// Loads macros and functions library dealing with tooltip appending and specific EE items descriptions.
+	LAM ~GW_READ_COL_TOOLTIP~										// Reads how many columns are in tooltip.2da file.
+
+	ACTION_IF (is_ee OR is_1pp_helmet OR is_1pp_400 OR is_1pp_swblbw) BEGIN
+		INCLUDE ~%MOD_FOLDER%/lib/1pp_macros.tpa~					// Loads 1PP macros dealing with items coloring.
+		LAM ~Locations~												// DEFINES location field values needed to alter items' colors.
+		INCLUDE ~%MOD_FOLDER%/lib/1pp_compatibility.tph~			// Loads functions restoring items coloration for EE games or if 1PP relevant components are installed.
+	END
+
+	/* --------------------------------------------------------------------------------------------- *
 	 *    Convert strings to UTF-8 for BGEE/BG2EE                                                    *
 	 *    No exception, everything needs to be converted                                             *
 	 *    setup.tra contains in game texts as well as installation texts and needs to be converted   *
 	 * --------------------------------------------------------------------------------------------- */
 	ACTION_DEFINE_ARRAY cr_reload BEGIN setup END
-		// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
+	// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
 	ACTION_DEFINE_ARRAY cr_noconvert BEGIN END
 	LAF HANDLE_CHARSETS
 		INT_VAR
 			infer_charsets = 1
 		STR_VAR
-			tra_path = EVAL ~%MOD_FOLDER%/tra~
+			tra_path = EVAL ~%MOD_FOLDER%/lang~
 			noconvert_array = cr_noconvert
 			reload_array = cr_reload
 	END
@@ -33,147 +60,249 @@ LANGUAGE ~Espanol (por Eslizon)~
 LANGUAGE ~English (translation by Lollorian)~
          ~english~
          ~darron/lang/english/setup.tra~
-		 
+
 LANGUAGE ~Italiano (traduzione di ilot)~
 		 ~italian~
-		 ~darron/lang//italian/setup.tra~
+		 ~darron/lang/italian/setup.tra~
 
 LANGUAGE ~Deutsch~
 		 ~german~
 		 ~darron/lang/german/setup.tra~
-		 
-		 
+
+
 /* ======================= *
  *         Darron          *
  * ======================= */
 BEGIN @0
 DESIGNATED 0 LABEL "darron"
-REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ //@1	// ~You must have BG2, ToB, BGT, BG2:EE or EET installed to install Bolsa mod.~
+REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @1	// ~You must have BG2, ToB, BGT, BG2:EE or EET installed to install the Darron mod.~
 
-COPY ~darron/ITEM/ESLIRIN0.ITM~ ~override\ESLIRIN0.itm~
-SAY NAME1 @1
-SAY NAME2 @2
-SAY UNIDENTIFIED_DESC @3
-SAY DESC @4
+/* --------------------------------- *
+ *  Copy BAMs or convert them to EE  *
+ * --------------------------------- */
+ACTION_IF is_ee BEGIN
+	INCLUDE ~%MOD_FOLDER%/lib/gw_convert_inventory_bam_to_ee.tpa~	// Loads function converting inventory BAMs to EE.
+	OUTER_SPRINT file-exc ~eslihel1 ~	// Special case: description icons don't need to be converted.
+	ACTION_BASH_FOR ~%MOD_FOLDER%/bams/~ ~^.+\.bam$~ BEGIN
+		ACTION_TO_LOWER %BASH_FOR_FILE%
+		ACTION_TO_LOWER %BASH_FOR_RES%
+		ACTION_IF (~%file-exc%~ STRING_CONTAINS_REGEXP ~%BASH_FOR_RES%~ = 1) BEGIN
+			COPY ~%BASH_FOR_FILESPEC%~ ~override/%BASH_FOR_FILE%~
+				LPF ~gw_convert_inventory_bam_to_ee~ END
+			BUT_ONLY
+		END ELSE BEGIN
+			COPY ~%BASH_FOR_FILESPEC%~ ~override/%BASH_FOR_FILE%~
+		END
+	END
+END ELSE BEGIN
+	COPY ~%MOD_FOLDER%/bams~	~override~
+END
 
-COPY ~darron/ITEM/ESLIRIN1.ITM~ ~override\ESLIRIN1.itm~
-SAY NAME1 @1
-SAY NAME2 @5
-SAY UNIDENTIFIED_DESC @3
-SAY DESC @6
 
-COPY ~darron/BAM/ESLIARM0.BAM~ ~override\ESLIARM0.BAM~
-COPY ~darron/ITEM/ESLIARM0.ITM~ ~override\ESLIARM0.itm~
-SAY NAME1 @7
-SAY NAME2 @8
-SAY UNIDENTIFIED_DESC @9
-SAY DESC @10
+/* ---------------- *
+ *  Items & Spells  *
+ * ---------------- */
 
-COPY ~darron/BAM/ESLIARM1.BAM~ ~override\ESLIARM1.BAM~
-COPY ~darron/ITEM/ESLIARM1.ITM~ ~override\ESLIARM1.itm~
-SAY NAME1 @7
-SAY NAME2 @11
-SAY UNIDENTIFIED_DESC @9
-SAY DESC @12
+// Ring of Electric Resistance
+// ---------------------------
+COPY ~darron/item/eslirin0.itm~ ~override~
+//	SAY NAME1 @101	SAY UNIDENTIFIED_DESC @103
+	SAY NAME2 @102
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@104" END
+BUT_ONLY
 
-COPY ~darron/BAM/ESLIBOW0.BAM~ ~override\ESLIBOW0.BAM~
-COPY ~darron/ITEM/ESLIBOW0.ITM~ ~override\ESLIBOW0.itm~
-SAY NAME1 @13
-SAY NAME2 @14
-SAY UNIDENTIFIED_DESC @15
-SAY DESC @16
+// Open Sesame Ring
+// ----------------
+COPY ~darron/item/eslirin1.itm~ ~override~
+//	SAY NAME1 @101	SAY UNIDENTIFIED_DESC @103
+	SAY NAME2 @105
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@106" END
+BUT_ONLY
+LAF ~GW_ADD_ITEM_TOOLTIPS~ STR_VAR GW_objet = ~eslirin1~ GW_tooltips = ~14118~ END	// Knock (3 times per day)
 
-COPY ~darron/BAM/ESLIBRA0.BAM~ ~override\ESLIBRA0.BAM~
-COPY ~darron/ITEM/ESLIBRA0.ITM~ ~override\ESLIBRA0.itm~
-SAY NAME1 @17
-SAY NAME2 @18
-SAY UNIDENTIFIED_DESC @19
-SAY DESC @20
+// Aurumvorax Armor +2
+// -------------------
+COPY ~darron/item/esliarm0.itm~ ~override~
+//	SAY NAME1 @107	SAY UNIDENTIFIED_DESC @109
+	SAY NAME2 @108
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@110" END
+	PATCH_IF (is_1pp_switch) BEGIN
+		LPF ADD_ITEM_EQEFFECT INT_VAR insert_point = "-1" opcode = 146 target = 1 timing = 2 parameter1 = 1 parameter2 = 1 STR_VAR resource = lcarmor END	// armor spell effect
+	END
+BUT_ONLY
 
-COPY ~darron/ITEM/ESLICLO0.ITM~ ~override\ESLICLO0.itm~
-SAY NAME1 @21
-SAY NAME2 @22
-SAY UNIDENTIFIED_DESC @23
-SAY DESC @24
+// Armor of the Master Thief
+// -------------------------
+COPY ~darron/item/esliarm1.itm~ ~override~
+//	SAY NAME1 @107	SAY UNIDENTIFIED_DESC @109
+	SAY NAME2 @111
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@112" END
+	PATCH_IF (is_1pp_switch) BEGIN
+		LPF ADD_ITEM_EQEFFECT INT_VAR insert_point = "-1" opcode = 146 target = 1 timing = 2 parameter1 = 1 parameter2 = 1 STR_VAR resource = lcarmor END	// armor spell effect
+	END
+BUT_ONLY
 
-COPY ~darron/ITEM/ESLIDAG0.ITM~ ~override\ESLIDAG0.itm~
-SAY NAME1 @25
-SAY NAME2 @26
-SAY UNIDENTIFIED_DESC @27
-SAY DESC @28
+// Short Bow +2 Defense
+// --------------------
+COPY ~darron/item/eslibow0.itm~ ~override~
+//	SAY NAME1 @113
+	SAY NAME2 @114
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@116" END
+	PATCH_IF is_ee BEGIN
+		LPF ~GW_ITEM_RESTRICT_USABILITY_EE~ INT_VAR GW_shaman = 1 END	
+	END
+	PATCH_IF (is_ee OR is_1pp_swblbw) BEGIN
+		WRITE_ASCII 0x22 ~BS~			// Shortbow - replaces BW Longbow
+		WRITE_ASCII 0x44 ~GBOW02~ #8	// replaces GBOW01
+	END
+BUT_ONLY
 
-COPY ~darron/ITEM/ESLIDAG1.ITM~ ~override\ESLIDAG1.itm~
-SAY NAME1 @25
-SAY NAME2 @29
-SAY UNIDENTIFIED_DESC @27
-SAY DESC @30
+// Veteran Pickpocketer's Gloves
+// -----------------------------
+COPY ~darron/item/eslibra0.itm~ ~override~
+//	SAY NAME1 @117	SAY UNIDENTIFIED_DESC @119
+	SAY NAME2 @118
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@120" END
+BUT_ONLY
 
-COPY ~darron/BAM/ESLIHEL0.BAM~ ~override\ESLIHEL0.BAM~
-COPY ~darron/BAM/ESLIHEL1.BAM~ ~override\ESLIHEL1.BAM~
-COPY ~darron/ITEM/ESLIHEL0.ITM~ ~override\ESLIHEL0.itm~
-SAY NAME1 @31
-SAY NAME2 @32
-SAY UNIDENTIFIED_DESC @33
-SAY DESC @34
+// Cloak of Shadows
+// ----------------
+COPY ~darron/item/esliclo0.itm~ ~override~
+//	SAY NAME1 @121	SAY UNIDENTIFIED_DESC @123
+	SAY NAME2 @122
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@124" END
+BUT_ONLY
 
-COPY ~darron/BAM/ESLIBOT0.BAM~ ~override\ESLIBOT0.BAM~
-COPY ~darron/ITEM/ESLIBOT0.ITM~ ~override\ESLIBOT0.itm~
-SAY NAME1 @35
-SAY NAME2 @36
-SAY UNIDENTIFIED_DESC @37
-SAY DESC @38
+// Dagger +1 Scorpion Sting
+// ------------------------
+COPY ~darron/item/eslidag0.itm~ ~override~
+//	SAY NAME1 @125	SAY UNIDENTIFIED_DESC @127
+	SAY NAME2 @126
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@128" END
+	PATCH_IF is_ee BEGIN
+		LPF CLONE_EFFECT INT_VAR silent = 1 check_globals = 0 header = 0 multi_match = 1 match_opcode = 25 opcode = 324 duration = 0 parameter1 = 0 parameter2 = 55 STR_VAR insert = first resource = "eslidag0" END	// undead or golem
+		LPF CLONE_EFFECT INT_VAR silent = 1 check_globals = 0 header = 0 multi_match = 1 match_opcode = 25 opcode = 324 duration = 0 parameter1 = 0 parameter2 = 77 STR_VAR resource = "eslidag0" END	// STAT RESISTPOISON >= 100
+	END
+	PATCH_IF (is_ee OR is_1pp_400) BEGIN
+		LPF ~1pp_dagg04~ END
+	END
+BUT_ONLY
+/*	PATCH_IF is_ee BEGIN
+		LPF ADD_ITEM_EFFECT INT_VAR type = 99 insert_point = 0 opcode = 324 target = 2 parameter2 = 77 STR_VAR resource = "eslidag0" END	// STAT RESISTPOISON >= 100
+		LPF ADD_ITEM_EFFECT INT_VAR type = 99 insert_point = 0 opcode = 324 target = 2 parameter2 = 55 STR_VAR resource = "eslidag0" END	// undead or golem
+	END
+*/
+// Dagger +2 Death Dagger
+// ----------------------
+COPY ~darron/item/eslidag1.itm~ ~override~
+//	SAY NAME1 @125	SAY UNIDENTIFIED_DESC @127
+	SAY NAME2 @129
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@130" END
+	PATCH_IF (is_ee OR is_1pp_400) BEGIN
+		LPF ~1pp_dagg10~ END
+	END
+BUT_ONLY
 
-COPY ~darron/BAM/ESLIBOT1.BAM~ ~override\ESLIBOT1.BAM~
-COPY ~darron/ITEM/ESLIBOT1.ITM~ ~override\ESLIBOT1.itm~
-SAY NAME1 @35
-SAY NAME2 @39
-SAY UNIDENTIFIED_DESC @37
-SAY DESC @40
+// Serick's Hood
+// -------------
+COPY ~darron/item/eslihel0.itm~ ~override~
+	SAY NAME1 @131
+	SAY NAME2 @132
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@134" GW_undesc_to_update = "@133" END
+	PATCH_IF (is_ee OR is_tobex) BEGIN
+		WRITE_LONG 0x18 THIS | BIT25	// add EE/Ex: Toggle critical hits flag
+	END
+BUT_ONLY
 
-COPY ~darron/BAM/ESLISWO0.BAM~ ~override\ESLISWO0.BAM~
-COPY ~darron/ITEM/ESLISWO0.ITM~ ~override\ESLISWO0.itm~
-SAY NAME1 @41
-SAY NAME2 @42
-SAY UNIDENTIFIED_DESC @43
-SAY DESC @44
+// Veteran Tracker's Boots
+// -----------------------
+COPY ~darron/item/eslibot0.itm~ ~override~
+//	SAY NAME1 @135	SAY UNIDENTIFIED_DESC @137
+	SAY NAME2 @136
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@138" END
+BUT_ONLY
 
-COPY ~darron/ITEM/ESLISWO1.ITM~ ~override\ESLISWO1.itm~
-SAY NAME1 @41
-SAY NAME2 @45
-SAY UNIDENTIFIED_DESC @43
-SAY DESC @46
+// Snakeskin Boots
+// ---------------
+COPY ~darron/item/eslibot1.itm~ ~override~
+//	SAY NAME1 @135	SAY UNIDENTIFIED_DESC @137
+	SAY NAME2 @139
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@140" END
+BUT_ONLY
 
-COPY ~darron/ITEM/Servidor.ITM~ ~override\Servidor.itm~
-SAY NAME1 @47
-SAY NAME2 @47
-SAY UNIDENTIFIED_DESC @48
-SAY DESC @48
+// The Way of Master Li
+// --------------------
+COPY ~darron/item/esliswo0.itm~ ~override~
+//	SAY NAME1 @141	SAY UNIDENTIFIED_DESC @143
+	SAY NAME2 @142
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@144" END
+BUT_ONLY
 
-COPY ~darron/ITEM/Servido2.ITM~ ~override\Servido2.itm~
-SAY NAME1 @49
-SAY NAME2 @50
-SAY UNIDENTIFIED_DESC @51
-SAY DESC @52
+// Katana +3 Dragon Fury
+// ---------------------
+COPY ~darron/item/esliswo1.itm~ ~override~
+//	SAY NAME1 @141	SAY UNIDENTIFIED_DESC @143
+	SAY NAME2 @145
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@146" END
+	PATCH_IF is_ee BEGIN
+		LPF ~GW_ALTER_ITEM_ALTER_HEADER_FLAGS~ INT_VAR type = 3 header = 2 flag_breaksanctuary = 1 END
+	END
+	PATCH_IF (is_ee OR is_1pp_swblbw) BEGIN
+		LPF ~1pp_sw1h44~ END
+	END
+BUT_ONLY
+LAF ~GW_ADD_ITEM_TOOLTIPS~ STR_VAR GW_objet = ~eslirin1~ GW_tooltips = ~@145 15531~ END	// Fireball (once per day)
 
-COPY ~darron/CRE/Servidor.cre~ ~override\Servidor.cre~
-   SAY NAME1 @53
-   SAY NAME2 @53
+// Guarded Dimensional Chest
+// -------------------------
+COPY ~darron/item/servidor.itm~ ~override~
+	SAY NAME1 @147
+	SAY NAME2 @147
+	SAY UNIDENTIFIED_DESC @148
+	SAY DESC @148
+BUT_ONLY
 
-COPY ~darron/STO/Servidor.sto~ ~override\Servidor.sto~
+// Guardian Statue
+// ---------------
+COPY ~darron/item/servido2.itm~ ~override~
+	SAY NAME1 @149
+	SAY NAME2 @150
+	SAY UNIDENTIFIED_DESC @151
+	SAY DESC @152
+BUT_ONLY
 
-COPY ~darron\spl\Servidor.spl~ ~override\Servidor.spl~
+COPY ~darron/spl/servidor.spl~ ~override~
 
-COMPILE ~darron\d\Servidor.d~
+COPY ~darron/cre/servidor.cre~ ~override~
+   SAY NAME1 @153 // ~Guardian~
+   SAY NAME2 @153
+BUT_ONLY
 
-COPY ~darron\CRE\darron.cre~ ~override\darron.cre~
-   SAY NAME1 @0
-   SAY NAME2 @0
+COMPILE ~darron/d/servidor.d~
 
-COPY ~darron\STO\ESLISTO0.sto~ ~override\ESLISTO0.sto~
+COPY ~darron/sto/servidor.sto~ ~override~
+	SAY NAME2 @147 // ~Guarded Dimensional Chest~
+BUT_ONLY
 
-EXTEND_BOTTOM ~ar0307.bcs~ ~darron\bcs\esdarron.bcs~
+// Pure cosmetic, but so cool!
+// ---------------------------
+COPY_EXISTING ~tooltip.2da~ ~override~
+	PRETTY_PRINT_2DA
+BUT_ONLY
 
-COMPILE ~darron\d\darron.d~
+// Merchant (Darron) and New store
+// -------------------------------
+COPY ~darron/cre/darron.cre~ ~override~
+	SAY NAME1 @100
+	SAY NAME2 @100
+BUT_ONLY
 
-COPY ~darron\CRE\elfo09l.bmp~ ~portraits\elfo09l.bmp~
-COPY ~darron\CRE\elfo09s.bmp~ ~portraits\elfo09s.bmp~
+COPY ~darron/sto/eslisto0.sto~ ~override~
+//TODO Add store name
+
+EXTEND_BOTTOM ~ar0307.bcs~ ~darron/bcs/esdarron.bcs~
+
+COMPILE ~darron/d/darron.d~
+
+COPY ~darron/CRE/elfo09l.bmp~ ~portraits/elfo09l.bmp~
+COPY ~darron/CRE/elfo09s.bmp~ ~portraits/elfo09s.bmp~

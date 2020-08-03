@@ -11,15 +11,15 @@
 DEFINE_PATCH_FUNCTION ~1pp_dagg04~ BEGIN
 	PATCH_IF (SOURCE_SIZE > 0x71) BEGIN	// protects against invalid files
 		LPM ~clear~
-				SET gradient = 248		// 248 OGRE_MAJOR-BATTLESHIP_GRAY replaces colour index 5 MEDIUM_SILVER
-				SET location = wgrey	// location (Head/Blade/Staff major)
-				LPM ~colour~
-				SET gradient = 225		// 225 DROW_MINOR-CORNSILK replaces colour index 63 LIGHT_GRAY
-				SET location = wred		// location (Grip/Staff minor - vanilla = whole staff)
-				LPM ~colour~
-				SET gradient = 249		// 249 OGRE_MINOR-METALLIC_SLATE replaces colour index 5 MEDIUM_SILVER
-				SET location = wblue	// location (Head/Blade minor)
-				LPM ~colour~
+		SET gradient = 248				// 248 OGRE_MAJOR-BATTLESHIP_GRAY replaces colour index 5 MEDIUM_SILVER
+		SET location = wgrey			// location (Head/Blade/Staff major)
+		LPM ~colour~
+		SET gradient = 225				// 225 DROW_MINOR-CORNSILK replaces colour index 63 LIGHT_GRAY
+		SET location = wred				// location (Grip/Staff minor - vanilla = whole staff)
+		LPM ~colour~
+		SET gradient = 249				// 249 OGRE_MINOR-METALLIC_SLATE replaces colour index 5 MEDIUM_SILVER
+		SET location = wblue			// location (Head/Blade minor)
+		LPM ~colour~
 	END
 END
 

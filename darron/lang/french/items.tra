@@ -1,0 +1,356 @@
+@100  = ~Darron~
+
+/* ================= *
+ *  Usability flags  *
+ * ================= */
+@9001 = ~[Uu]tilisable\([ %tab%]+[Ss]eulement+\|[ %tab%]+{Uu]niquement\)?[ %tab%]+[Pp]ar[ %tab%]*:~
+@9002 = ~\([Nn]on[ %tab%]+\|[Ii]n\)[Uu]tilisable[ %tab%]+[Pp]ar[ %tab%]*:~
+
+/* ======= *
+ *  Items  *
+ * ======= */
+
+/* DEPRECATED as of v2.0.0
+@101  = ~Ring~
+@103  = ~A ring is a small band of precious metal that is used as a gem. Some rare rings have had enchantments that confer various magical properties. These rings are highly sought after, especially by those who are dedicated to adventuring.~*/
+@102  = ~Anneau de résistance à l'électricité~
+@104  = ~Les origines de cet anneau sont inconnues. Peut-être dut-il fabriqué par un magicien qui essayait de voyager dans le plan élémentaire de l'Air.
+
+PARAMÈTRES :
+
+Capacité d'équipement :
+- Résistance à l'électricité : +40 %
+
+Poids : 0
+
+Non utilisable par :
+ Tueur de magicien~
+
+@105  = ~Anneau Sésame ouvre-toi~
+@106  = ~Cet anneau a été créée par le chef d'une guilde de voleurs dont les membres étaient très maladroits. Grâce aux pouvoirs magiques de cet anneau, toute serrure est facile à ouvrir.
+
+PARAMÈTRES :
+
+Capacité de charge :
+- Déblocage trois fois par jour
+
+Poids : 0
+
+Non utilisable par :
+ Tueur de magicien~
+
+/* DEPRECATED as of v2.0.0
+@107  = ~Leather Armor~
+@109  = ~The leather armor, unlike the widespread popular belief, is not smooth and thin as the leather used for boots of the adventurers or the furs of the Druids. This type of leather offers no better protection than normal clothing.
+
+PARAMÈTRES :
+
+Armor Class: 8
+Poids : 15
+Non utilisable par :
+  Mage~*/
+@108  = ~Armure de Aurumvorax +2~
+@110  = ~On suppose que cette armure a été taillé dans la peau dorée d'un féroce Aurumvorax, une bête gloutonne à six pattes qui mange non seulement de la viande mais aussi des métaux précieux comme l'or. Le régime alimentaire de la créature a donné à sa peau son aspect spectaculaire et lui a conféré d'incroyables qualités protectrices contre les armes.
+
+PARAMÈTRES :
+
+Classe d'armure : 6 (3 contre tranchant et perforant, 8 contre projectile)
+Force nécessaire : 4
+
+Poids : 5
+
+Non utilisable par :
+ Mage
+ Moine
+ Métamorphe
+ Kensai~
+
+@111  = ~Armure du Maître voleur~
+@112  = ~Les origines de cette armure se sont perdues dans le temps. Pendant des années, les chefs des plus importantes guildes de voleurs se sont battus pour elle, car on dit que celui qui la possède deviendra le meilleur cambrioleur de tous les temps et gagnera le surnom de Maître des Voleurs.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- Se cacher dans l'ombre : +75 %
+- Dextérité : +2
+
+Classe d'armure : 4 (2 contre tranchant, 3 contre perforant et projectile)
+
+Force nécessaire : 6
+
+Poids : 8
+
+Utilisable uniquement par :
+ Voleur~
+
+/* DEPRECATED as of v2.0.0
+@113  = ~Short Bow~
+@115  = ~When short bows were first developed, they were not called by that name. Nowadays, this term is applied to anything other than a longbow. The shafts of short bows are about 150 centimeters on average. Over time, attempts were made to improve the range of the bows. This was done by lengthening the shafts or increasing flexibility without changing the length. The first case resulted in the longbow.
+
+PARAMÈTRES :
+
+Damage:
+Poids : 2
+Speed Factor: 6
+Proficiency: Short Bow
+Non utilisable par :
+ Druid
+ Cleric
+ Mage~*/
+@114  = ~Arc court +2 de défense~
+@116  = ~Cet arc a été créé pour compenser l'absence de bouclier lors de son utilisation et procure un petit bonus à la classe d'armure.
+
+PARAMÈTRES :
+
+Capacité d'équipement :
+- Classe d'armure : +1
+
+TAC0: +2
+Facteur de vitesse : 4
+Type de compétence : arc court
+Type : arme à 2 mains
+Force nécessaire : 3
+
+Poids : 2
+
+Non utilisable par :
+ Druide
+ Clerc
+ Mage
+ Moine
+ Chevalier
+ Kensai~
+
+/* DEPRECATED as of v2.0.0
+@117  = ~Bracers~
+@119  = ~Bracelets are thick bands of metal or leather that are strapped to the forearm of the character. Usually, the magic infused in armbands can be used only during combat, since most of them serve to protect the wearer from injuries and increase your chances of hitting the opponent. There are exceptions however, and the number increases everyday.
+
+PARAMÈTRES :
+
+Poids : 2~*/
+@118  = ~Gants de Pickpocket vétéran~
+@120  = ~Ces gants appartenaient au célèbre voleur Urank de la Porte de Baldur. Après avoir amassé une grande fortune et être devenu marchand, il jura de ne plus voler, vendant ses gants spéciaux pour échapper à la tentation de voler. Peu de temps après, ses affaires ont mal tourné et il fut complètement ruiné.
+
+PARAMÈTRES :
+
+Capacité d'équipement :
+- Vol à la tire : +40%
+
+Poids : 2
+
+Utilisable uniquement par :
+ Barde
+ Voleur~
+
+/* DEPRECATED as of v2.0.0
+@121  = ~Cloak~
+@123  = ~A cloak may be of any shape and be made by any type of fabric. The most common form is a round piece of cloth with a hole in the middle for the head, with fabric draped from the neck on a chain, a brooch, a belt or pins.~*/
+@122  = ~Manteau des Ombres~
+@124  = ~Le Manteau des Ombres a été créé pour que les voleurs puissent imiter les Voleurs de l'Ombre d'Amn. Les Maîtres de l'Ombre constituent l'Ordre le plus élevé dans la hiérarchie des Voleurs de l'ombre.
+
+PARAMÈTRES :
+
+Capacité d'équipement :
+- Se cacher dans l'ombre : +40 %
+
+Poids : 2
+
+Utilisable uniquement par :
+ Voleur~
+
+/* DEPRECATED as of v2.0.0
+@125  = ~Dagger~
+@127  = ~The typical dagger has a pointed double-edged blade, unlike the knife, which has only one edge and is slightly shorter than the dagger.
+
+PARAMÈTRES :
+
+Dégâts :1D4
+Damage Type: Piercing
+Poids : 1
+Speed Factor: 2
+Proficiency: Dagger
+Non utilisable par :
+ Cleric~*/
+@126  = ~Dague +1 Dard du scorpion~
+@128  = ~Cette dague a été créée à partir du dard d'un bébé scorpion, car ils possèdent un venin beaucoup plus mortel que les scorpions adultes. Le venin contenu dans la lame se répand rapidement dans le corps de la victime dès que le premier coup est porté.
+
+PARAMÈTRES :
+
+TAC0 : +1
+Dégâts : 1d4 +1, +2 dégâts de poison par seconde (pendant 10 secondes)
+Type de dégâts : perforant
+Facteur de vitesse : 1
+Type de compétence : dague
+Type : arme à 1 main
+Force nécessaire : 3
+
+Poids : 1
+
+Non utilisable par :
+ Clerc
+ Belluaire~
+
+@129  = ~Dague +2 de Mort~
+@130  = ~Cette dague a été créée pour son propre usage par un sorcier maléfique qui l'a enchantée avec de terribles sorts de mort. Malheureusement, il a trouvé sa propre mort avec so arme en se piquant accidentellement le doigt en l'utilisant pour ouvrir une enveloppe
+
+PARAMÈTRES :
+
+Capacité de combat :
+- 20 % de chances de tuer automatiquement la cible sur un coup au but si elle rate un jet de sauvegarde contre la mort avec une pénalité de 3.
+
+TAC0 : +2
+Dégâts : 1d4 +2
+Type de dégâts : perforant
+Facteur de vitesse : 0
+Type de compétence : dague
+Type : arme à 1 main
+Force nécessaire : 3
+
+Poids : 1
+
+Non utilisable par :
+ Clerc
+ Belluaire~
+
+@131  = ~Capuche~
+@132  = ~Capuche de Serick~
+@133  = ~Il s'agit d'une simple cagoule de voleur, utile pour cacher son visage et passer inaperçu~
+@134  = ~Serick était un célèbre voyou qui avait de nombreux ennemis. C'était un combattant invincible sans rival au combat. C'est pourquoi ses ennemis essayaient toujours de le poignarder dans le dos. Mais pour une raison quelconque, ils échouaient toujours.
+
+PARAMÈTRES :
+
+Capacité d'équipement :
+- Immunité à l'attaque sournoise
+
+Poids : 1
+
+Utilisable uniquement par :
+ Voleur~
+
+/* DEPRECATED as of v2.0.0
+@135  = ~Boots~
+@137  = ~The boots are crafted by cobblers. Normal boots are made from a mold, but boots of good standing are designed for any notable person.
+
+PARAMÈTRES :
+
+Poids : 4~*/
+@136  = ~Bottes de traqueur de vétéran~
+@138  = ~La furtivité est la meilleure arme pour de nombreux voleurs. C'est pourquoi ils ont créé de nombreux objets magiques spécifiques pour améliorer cette capacité. Ces bottes n'ont pas été créées pour un voleur, mais pour un noble qui se livrait à l'espionnage et dont la femme était infidèle. Mais il fut assassiné par l'amant de sa femme et ses bottes ont disparu jusqu'à ce jour. Certains prétendent que l'amant était le même Darron auprès de qui vous avez obtenu cette paire de bottes.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- Déplacement silencieux : +30 %
+- Se cacher dans l'ombre : +20 %
+
+Poids : 4
+
+Utilisable par :
+ Voleur
+ Moine
+ Rôdeur~
+
+@139  = ~Bottes en peau de serpent~
+@140  = ~Les bottes en peau de serpent sont fabriquées à partir de peaux de serpent sacrés. Originaires de terres lointaines, elles sont très appréciées par de nombreux nobles qui les ont importées pour éviter d'être empoisonnés, grâce à la protection magique qu'elles procurent.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- Immunité au poison
+- Classe d'armure : +1 contre les armes perforantes et les projectiles
+
+Poids : 4~
+
+/* DEPRECATED as of v2.0.0
+@141  = ~Katana~
+@143  = ~The katana is a curved sword with one edge and tapered. Perhaps one of the best swords that were ever crafted. The steps in its creation, a long and secret process, are more an art form than anything else. Your resume is one of the most important facets of the culture of Kara-Tur. Touching or picking the katana of a samurai is an insult to attract his anger. A gaijin or foreigner who has one of these swords is rare. Either the gaijin has been honored by a senior Kara-Turan minister or murdered a samurai.
+
+PARAMÈTRES :
+
+Dégâts :1D10
+Damage Type: Slashing
+Poids : 6
+Speed Factor: 4
+Proficiency: Katana
+Type: One-handed
+Non utilisable par :
+  Druid
+  Mage
+  Cleric~*/
+@142  = ~La Voie de Maître Li~
+@144  = ~On pensait autrefois qu'il n'existait qu'un seul exemplaire de cette lame forgée par un artisan exceptionnel, mais on sait maintenant que plusieurs de ces katanas se trouvaient un navire qui s'est échoué sur la Côte des Épées il y a quelques années. Tous portent la marque de Maître Hu Li, le grand inventeur de l'Est, mais on ne sait pas grand-chose d'autre sur lui.
+
+PARAMÈTRES :
+
+TAC0 : +2
+Dégâts : 1d10 +2, +2 d'acide
+Type de dégâts : tranchant
+Facteur de vitesse : 1
+Type de compétence : katana
+Type : arme à 1 main
+Force nécessaire : 6
+
+Poids : 4
+
+Non utilisable par :
+ Druide
+ Clerc
+ Mage
+ Belluaire~
+
+@145  = ~Katana +3 Fureur du dragon~
+@146  = ~Bien que ressemblant à une épée normale, ce katana a tué un puissant dragon. L'âme du dragon est enfermée dans l'épée, ce qui lui confère un terrible pouvoir sur la maîtrise du feu.
+
+PARAMÈTRES :
+
+Capacité de charge :
+- Boule de feu une fois par jour
+
+TAC0 : +3
+Dégâts : 1d12 +3, +6 de feu
+Type de dégâts : tranchant
+Facteur de vitesse : 1
+Type de compétence : katana
+Type : arme à 1 main
+Force nécessaire : 6
+
+Poids : 4
+
+Non utilisable par :
+ Druide
+ Clerc
+ Mage
+ Belluaire~
+
+@147  = ~Coffre dimensionnel gardé~
+@148  = ~Coffre dimensionnel gardé
+(Convocation/Conjuration, Invocation/Évocation)
+
+Niveau : 7
+Portée : illimitée
+Durée : spéciale
+Temps d'incantation : 9
+Zone d'effet : spéciale
+Jet de sauvegarde : spécial
+
+Il s'agit d'une version améliorée du sortilège "Coffre dimensionnel". Fondamentalement, il fonctionne de la même manière, mais intègre un garde planaire qui surveille le coffre à son emplacement entre les plans, l'empêchant d'être pillé et inspecté par des créatures natives de ce plan.
+
+Une fois le sort lancé, il invoque le Gardien du coffre qui décrit le contenu du coffre du mage. L'intérieur de ce coffre est pratiquement dépourvu de substance, et peut contenir autant d'objets que vous le souhaitez.
+
+Le Gardien est lié à la volonté du mage, mais il se battra alors que dans le Plan primaire matériel, seules les créatures planaires se battront pour essayer d'ouvrir le coffre. Cependant, s'il est attaqué le peut de temps quil passe avec le mage, il se défendra en attaquant son agresseur et en dissipant toute magie. S'il est détruit, il se recomposera à côté du coffre à un autre niveau, car son essence est liée au coffre et ne sera effectivement détruite que lorsque le coffre le sera. C'est une autre raison qui l'oblige à garder le coffre au trésor.~
+
+@149  = ~Statue~
+@150  = ~Statue du Gardien~
+@151  = ~Cette statue représente une espèce d'être d'une taille supérieure à celle d'un humain. Sa posture suggère qu'il émerge à travers un fluide tout en tenant quelque chose de lourd dans ses mains.
+
+Vous ne savez pas à quoi elle sert, mais il en émane une aura magique.
+
+Poids : 15~
+@152  = ~Cette statue a été enchantée par la version améliorée du sortilège Coffre dimensionnel. Lorsqu'on l'active, elle appelle une créature appelée le Gardien, dont le rôle est de protéger une boîte magique.
+
+Ce coffre est fait des matériaux les plus précieux, mais son véritable pouvoir réside dans sa capacité à stocker un grand nombre d'objets. De nature inter-planaire, le coffre se trouve dans un endroit protégé de toute tentative de vol.
+
+Le mage peut appeler le Gardien jusqu'à deux fois par jour pour entreposer dans le coffre ou en retirer des objets à volonté.
+
+Poids : 15~
+@153  = ~Gardien~

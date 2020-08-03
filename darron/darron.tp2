@@ -72,6 +72,16 @@ LANGUAGE ~Deutsch~
          ~darron/lang/german/setup.tra~
          ~darron/lang/german/items.tra~
 
+LANGUAGE ~Francais (traduction : Gwendolyne)~
+		 ~french~
+         ~darron/lang/french/setup.tra~
+         ~darron/lang/french/items.tra~
+
+LANGUAGE ~Russian~
+		 ~russian~
+         ~darron/lang/russian/setup.tra~
+         ~darron/lang/russian/items.tra~
+
 
 /* ======================= *
  *         Darron          *

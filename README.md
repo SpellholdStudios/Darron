@@ -35,8 +35,8 @@ This mod adds Darron, a new merchant who sells new objects created especially fo
 - ...
 - Added foreign languages WeiDU prompts whenever possible.
 - Updated .tra files for compatibility with `GW_UPDATE_ITM_DESCRIPTION_TO_EE` WeiDU function requirements which automatically removes usability restrictions for EE games.
-- TODO Added French translation (Gwendolyne).
-- TODO Added Russian translation (BWP Russian Textpack team).
+- Added French translation (Gwendolyne).
+- Added Russian translation (BWP Russian Textpack team).
 - Split setup.tra file into separate thematic files for more comfortable readability
 - TODO Updated and renamed readme file to *darron-readme-%LANGUAGE%.txt*, then moved it into new "*readme*" folder.
 - Removed useless "*backup*" folder.

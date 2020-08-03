@@ -1,0 +1,362 @@
+@100  = ~Darron~
+
+/* ================= *
+ *  Usability flags  *
+ * ================= */
+@9001 = ~\([Oo]nly[ %tab%]+\)?[Uu]sable[ %tab%]+[Bb]y[ %tab%]*:~
+@9002 = ~\(Not[ %tab%]+\|Un\)[Uu]sable[ %tab%]+[Bb]y[ %tab%]*:~
+
+/* ======= *
+ *  Items  *
+ * ======= */
+
+/* DEPRECATED as of v2.0.0
+@101  = ~Ring~
+@103  = ~A ring is a small band of precious metal that is used as a gem. Some rare rings have had enchantments that confer various magical properties. These rings are highly sought after, especially by those who are dedicated to adventuring.~*/
+@102  = ~Ring of Electric Resistance~
+@104  = ~The origin of this ring is unknown. Perhaps it was built by a mage who tried to travel to the elementary plane of Air.
+
+STATISTICS:
+
+Equipped abilities:
+- Electricity Resistance: +40%
+
+Weight: 0
+
+Not usable by:
+ Wizard Slayer~
+
+@105  = ~Open Sesame Ring~
+@106  = ~This ring was created by the head of a thieves' guild whose members were very clumsy. Thanks to the magical powers of this ring any lock is easy to open.
+
+STATISTICS:
+
+Charge abilities:
+- Open Locks three times per day
+
+Weight: 0
+
+Not usable by:
+ Wizard Slayer~
+
+/* DEPRECATED as of v2.0.0
+@107  = ~Leather Armor~
+@109  = ~The leather armor, unlike the widespread popular belief, is not smooth and thin as the leather used for boots of the adventurers or the furs of the Druids. This type of leather offers no better protection than normal clothing.
+
+STATISTICS:
+
+Armor Class: 8
+Weight: 15
+Not Usable by:
+  Mage~*/
+@108  = ~Aurumvorax Armor +2~
+@110  = ~It is assumed that this armor is made of golden toned skin of a fierce Aurumvorax, a gluttonous beast with six legs that eats not only meat but also precious metals like gold. The diet of the creature has made its skin exude a spectacular finish and granted it incredible protective qualities, an ability shared by the weapon resistance from it.
+
+STATISTICS:
+
+Armor Class: 6 (3 vs slashing and piercing, 8 vs. missile)
+Requires:
+ 4 Strength
+
+Weight: 5
+
+Not usable by:
+ Mage
+ Monk
+ Shapeshifter
+ Kensai~
+
+@111  = ~Armor of the Master Thief~
+@112  = ~The origin of this armor has been lost in time. For years, the leaders of the most important guilds of thieves have fought for it because it is said that whoever possesses it will become the best rogue of all time and may be called the Master of the Thieves.
+
+STATISTICS:
+
+Equipped abilities:
+- Hide in Shadows: +75%
+- Dexterity: +2
+
+Armor Class: 4 (2 vs. slashing, 3 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 8
+
+Only usable by:
+ Thief (single, dual, & multi-class)~
+
+/* DEPRECATED as of v2.0.0
+@113  = ~Short Bow~
+@115  = ~When short bows were first developed, they were not called by that name. Nowadays, this term is applied to anything other than a longbow. The shafts of short bows are about 150 centimeters on average. Over time, attempts were made to improve the range of the bows. This was done by lengthening the shafts or increasing flexibility without changing the length. The first case resulted in the longbow.
+
+STATISTICS:
+
+Damage:
+Weight: 2
+Speed Factor: 6
+Proficiency: Short Bow
+Not Usable by:
+ Druid
+ Cleric
+ Mage~*/
+@114  = ~Short Bow +2 Defense~
+@116  = ~This bow was created to compensate for the lack of shield when in use. Thus providing the user with a small saving throw bonus.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class: +1
+
+THAC0: +2
+Speed Factor: 4
+Proficiency: Shortbow
+Type: Two-handed
+Requires:
+ 3 Strength
+
+Weight: 2
+
+Not usable by:
+ Druid
+ Cleric
+ Mage
+ Monk
+ Cavalier
+ Kensai~
+
+/* DEPRECATED as of v2.0.0
+@117  = ~Bracers~
+@119  = ~Bracelets are thick bands of metal or leather that are strapped to the forearm of the character. Usually, the magic infused in armbands can be used only during combat, since most of them serve to protect the wearer from injuries and increase your chances of hitting the opponent. There are exceptions however, and the number increases everyday.
+
+STATISTICS:
+
+Weight: ~*/
+@118  = ~Veteran Pickpocketer's Gloves~
+@120  = ~These gloves belonged to the great thief, Urank of Baldur's Gate. After amassing a large fortune and becoming a merchant, he swore to not steal again, selling his special gloves to avoid the temptation to steal. Shortly after this, his business went bad and he became completely ruined.
+
+STATISTICS:
+
+Equipped abilities:
+- Pick Pockets: +40%
+
+Weight: 2
+
+Only usable by:
+ Bard
+ Thief~
+
+/* DEPRECATED as of v2.0.0
+@121  = ~Cloak~
+@123  = ~A cloak may be of any shape and be made by any type of fabric. The most common form is a round piece of cloth with a hole in the middle for the head, with fabric draped from the neck on a chain, a brooch, a belt or pins.~*/
+@122  = ~Cloak of Shadows~
+@124  = ~The Cloak of Shadows was created so that thieves could emulate the Shadow Thieves of Amn. Shadow Masters are the highest order within the hierarchy of the Shadow Thieves.
+
+STATISTICS:
+
+Equipped abilities:
+- Hide in Shadows: +40%
+
+Weight: 2
+
+Only usable by:
+ Thief (single, dual, & multi-class)~
+
+/* DEPRECATED as of v2.0.0
+@125  = ~Dagger~
+@127  = ~The typical dagger has a pointed double-edged blade, unlike the knife, which has only one edge and is slightly shorter than the dagger.
+
+STATISTICS:
+
+Damage: 1D4
+Damage Type: Piercing
+Weight: 1
+Speed Factor: 2
+Proficiency: Dagger
+Not Usable by:
+  Cleric~*/
+@126  = ~Dagger +1 Scorpion Sting~
+@128  = ~This dagger was created from the stinger of a baby scorpion, since babies carry venom much more lethal than adult scorpions. The venom in the blade spreads quickly within the targets body as soon as the first hit is landed.
+
+STATISTICS:
+
+THAC0: +1
+Damage: 1d4+1, +2 points of poison damage per second for 10 seconds
+Damage type: piercing
+Speed Factor: 1
+Proficiency: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1
+
+Not usable by:
+ Cleric
+ Beast Master~
+
+@129  = ~Death Dagger +2~
+@130  = ~This dagger was created by an evil sorcerer, who enchanted it with terrible death spells for use as a personal weapon. Unfortunately, he found his own death at the hands of the dagger, by accidentally pricking his finger when he used this to open an envelope.
+
+STATISTICS:
+
+Combat abilities:
+- 20% chance each hit that target must save against death magic (with a -3 penalty) or die immediately.
+
+THAC0: +2
+Damage: 1d4+2
+Damage type: piercing
+Speed Factor: 0
+Proficiency: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1
+
+Not usable by:
+ Cleric
+ Beast Master~
+
+@131  = ~Hood~
+@132  = ~Serick's Hood~
+@133  = ~A simple thief hood, useful for covering their faces and going unnoticed.~
+@134  = ~Serick was a celebrated rogue who had many enemies. He was an invincible fighter without rival in battle. So, his enemies always tried to stab him in the back. But for some reason, always failed.
+
+STATISTICS:
+
+Equipped abilities:
+- Immunity to backstab
+
+Weight: 1
+
+Only usable by:
+ Thief (single, dual, & multi-class)~
+
+/* DEPRECATED as of v2.0.0
+@135  = ~Boots~
+@137  = ~The boots are crafted by cobblers. Normal boots are made from a mold, but boots of good standing are designed for any notable person.
+
+STATISTICS:
+
+Weight: 4~*/
+@136  = ~Veteran Tracker's Boots~
+@138  = ~Stealth is the best weapon for many thieves. So they have created many special magic items to improve this trait. These boots were not created originally for a thief, but were created for a noble who was engaged in spying and whose wife was unfaithful. Murdered by his wife's lover, these boots were lost in time so far. Some say that the lover was the very Darron that you got these boots off.
+
+STATISTICS:
+
+Equipped abilities:
+- Move Silently: +30%
+- Hide in Shadows: +20%
+
+Weight: 4
+
+Usable by:
+ Thief
+ Monk
+ Ranger~
+
+@139  = ~Snakeskin Boots~
+@140  = ~Snakeskin boots are made from sacred snake skins. Brought from distant lands, these are highly valued by many nobles who had brought them to avoid being poisoned, thanks to the magic that these boots possess.
+
+STATISTICS:
+
+Equipped abilities:
+- Immunity to poison
+- Armor class bonus: +1 against weapons drills piercing and missiles
+
+Weight: 4~
+
+/* DEPRECATED as of v2.0.0
+@141  = ~Katana~
+@143  = ~The katana is a curved sword with one edge and tapered. Perhaps one of the best swords that were ever crafted. The steps in its creation, a long and secret process, are more an art form than anything else. Your resume is one of the most important facets of the culture of Kara-Tur. Touching or picking the katana of a samurai is an insult to attract his anger. A gaijin or foreigner who has one of these swords is rare. Either the gaijin has been honored by a senior Kara-Turan minister or murdered a samurai.
+
+STATISTICS:
+
+Damage: 1D10
+Damage Type: Slashing
+Weight: 6
+Speed Factor: 4
+Proficiency: Katana
+Type: One-handed
+Not usable by:
+  Druid
+  Mage
+  Cleric~*/
+@142  = ~The Way of Master Li~
+@144  = ~It was once thought there was only one copy of this craftsman's skill, but is now known that several of these katanas were bound on a ship that ran aground on the Sword Coast some years ago. All bear the stamp of Master Hu Li, the great inventor from the East, but little else is known about him.
+
+STATISTICS:
+
+THAC0: +2
+Damage: 1d10+2, +2 acid damage
+Damage type: slashing
+Speed Factor: 1
+Proficiency: Katana
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4
+
+Not usable by:
+ Druid
+ Cleric
+ Mage
+ Beast Master~
+
+@145  = ~Dragon Fury Katana +3~
+@146  = ~Although apparently looks like a normal sword, the katana killed a deadly dragon. The soul of the dragon is enclosed within the sword, giving this terrible power over the mastery of fire.
+
+STATISTICS:
+
+Charge abilities:
+- Can cast Fireball once per day
+
+THAC0: +3
+Damage: 1d12+3, +6 fire damage
+Damage type: slashing
+Speed Factor: 1
+Proficiency: Katana
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4
+
+Not usable by:
+ Druid
+ Cleric
+ Mage
+ Beast Master~
+
+@147  = ~Guarded Dimensional Chest~
+@148  = ~Guarded Dimensional Chest
+(Conjuration/Summoning, Invocation/Evocation)
+
+Level: 7
+Range: Unlimited
+Duration: Special
+Casting Time: 9
+Area of Effect: Special
+Saving throw: Special
+
+This spell is an advanced version of the spell "Dimensional Chest". Basically, the spell functions similarly, but incorporates a planar guard to watch over the casket on its location between the planes, preventing it from being looted and inspected by creatures native to that plane.
+
+When casting the spell, it will invoke the Keeper of the Chest, which describes the contents of the mage's Chest. The interior of this chest is virtually devoid of substance, and can store as many items you like.
+
+The Guardian is linked to the will of the mage, but will struggle while in the Prime Material Plane, only planar creatures will fight to try to open the chest. However, if attacked in the short term remain with the mage, will defend itself by attacking her attacker and dispelling any magic. If destroyed, it recomposes beside the chest on another level, because its essence is tied to it and will only be effectively destroyed when the box is destroyed. Another reason that forces it to guard the treasure chest.~
+
+@149  = ~Statue~
+@150  = ~Guardian Statue~
+@151  = ~This statue represents some kind of being of a size greater than a human. His posture suggests that is emerging through a fluid while holding something heavy in his arms.
+
+Its usefulness is unknown, but it resonates with some sort of magical power.
+
+Weight: 15~
+@152  = ~This statue has been enchanted with a spell improved Dimensional Chest. In use, the statue will call a creature called the Guardian, whose role is to protect a magic box.
+
+This chest is made of more valuable materials, but their power is that it is capable of storing a large number of objects. The chest, being interplanar, resides in a location away from any theft.
+
+The mage can call to your side the Guardian up to twice a day to enter and remove objects from inside at will.
+
+Weight: 15~
+@153  = ~Guardian~

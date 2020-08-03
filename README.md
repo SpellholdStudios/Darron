@@ -26,15 +26,19 @@ This mod adds Darron, a new merchant who sells new objects created especially fo
 - TODO Added *darron.ini* metadata file to support AL|EN's "Project Infinity".
 - Renamed *Setup-DARRON.tp2* -> *darron.tp2* and moved it to top mod folder to support AL|EN's "Project Infinity".
 - TODO Replaced `AUTHOR` keyword with `SUPPORT`.
-- Added `HANDLE_CHARSETS` function to convert string entries for EE games
+- Added `HANDLE_CHARSETS` function to convert string entries for EE games.
 - Added `REQUIRE_PREDICATE` conditions to avoid installing the mod in inaccurate games.
 - Added component `DESIGNATED` number and "*darron*" `LABEL`.
 - Added native BG2:EE and EET compatibility.
+- Fixed Darron portraits in EE games.
+- Converted inventory BAMs to EE: This feature attempts to modify traditional inventory BAMs so that both the large and small icons are utilized by the EE games. The inventory BAM must have two sequences, the first containing the "large" inventory icon frame and the second containing the "small" inventory icon frame to be processed. Inventory icon BAMs in the bam folder that meet these requirements are patched and saved back to the *override* folder.
 - ...
-- ...
-- TODO Added foreign languages WeiDU prompts whenever possible.
-- TODO Updated .tra files for compatibility with GW_UPDATE_ITM_DESCRIPTION_TO_EE WeiDU function requirements which automatically removes usability restrictions for EE games.
-- TODO Updated and renamed readme files to *darron-readme-%LANGUAGE%.txt*, then moved them into new "*readme*" folder.
+- Added foreign languages WeiDU prompts whenever possible.
+- Updated .tra files for compatibility with `GW_UPDATE_ITM_DESCRIPTION_TO_EE` WeiDU function requirements which automatically removes usability restrictions for EE games.
+- TODO Added French translation (Gwendolyne).
+- TODO Added Russian translation (BWP Russian Textpack team).
+- Split setup.tra file into separate thematic files for more comfortable readability
+- TODO Updated and renamed readme file to *darron-readme-%LANGUAGE%.txt*, then moved it into new "*readme*" folder.
 - Removed useless "*backup*" folder.
 - Reorganized mod architecture tree: created or renamed folders to sort files according to their types.
 - Lower cased files.
@@ -95,7 +99,7 @@ This mod adds Darron, a new merchant who sells new objects created especially fo
 	- Added 1PP compatibility to harmonize colors item with EE games and classical 1PP modded games.
 	- Appended tooltip.2da: *Katana +3 Dragon Fury - Fireball*.
 - <ins>Guarded Dimensional Chest</ins> (servidor.itm):
-	- Fixed item description: added missing Weight (15).
+	- Fixed item description: added missing weight (15).
 	- Added missing Monk restriction flag.
 
 ## 

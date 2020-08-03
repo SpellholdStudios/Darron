@@ -1,0 +1,358 @@
+@100  = ~Darron~
+
+/* ================= *
+ *  Usability flags  *
+ * ================= */
+@9001 =~[Kk]ann[ %tab%]+[Nn]ur[ %tab%]+[Vv]erwendet[ %tab%]+[Ww]erden[ %tab%]+[Vv]on[ %tab%]*:~
+@9002 =~[Kk]ann[ %tab%]+[Nn]icht[ %tab%]+[Vv]erwendet[ %tab%]+[Ww]erden[ %tab%]+[Vv]on[ %tab%]*:~
+
+/* ======= *
+ *  Items  *
+ * ======= */
+
+/* DEPRECATED as of v2.0.0
+@101  = ~Ring~
+@103  = ~Ein Ring ist ein kleines Band aus wertvollem Metall, das als Schmuck am Finger getragen wird. Einige Ringe sind verzaubert und verleihen magische Fähigkeiten. Diese Ringe sind heißbegehrt, insbesondere von Abenteurern und Magiern.~*/
+@102  = ~Ring der Elektrizitätsresistenz~
+@104  = ~Der Ursprung dieses Rings ist nicht bekannt. Möglicherweise wurde er von einem Magiekundigen erschaffen, der die elementare Ebene der Luft bereisen wollte.
+
+EIGENSCHAFTEN:
+
+Elektrizitätsresistenz: +40%
+
+Gewicht: 0
+
+Kann nicht verwendet werden von:
+ Magiertöter~
+
+@105  = ~Sesam öffne dich~
+@106  = ~Dieser Ring wurde vom Anführer einer Diebesgilde geschaffen, deren Mitglieder äußerst tollpatschig waren. Dank der magischen Fähigkeiten dieses Gegenstands lassen sich die meisten Schlösser mit Leichtigkeit öffnen.
+
+EIGENSCHAFTEN:
+
+Schlösser Öffnen (3x täglich)
+
+Gewicht: 0
+
+Kann nicht verwendet werden von:
+ Magiertöter~
+
+/* DEPRECATED as of v2.0.0
+@107  = ~Lederrüstung~
+@109  = ~Rüstungsleder wird mit Wachs oder Wasser gehärtet. Es ist dick und fest, nicht weich und geschmeidig wie das Leder, das für die Stiefel eines Waldläufers oder das Gewand eines Druiden verwendet wird. Solches Leder würde nicht mehr Schutz bieten als normale Stoffkleidung.
+
+EIGENSCHAFTEN:
+
+Rüstungsklasse: 8
+RK-Malus: +2 gg. Stichwaffen
+Gewicht: 15
+Mindeststärke: 4
+
+Kann nicht verwendet werden von:
+- Magiern
+- Mönchen~*/
+@108  = ~Aurumvorax Rüstung +2~
+@110  = ~Es wird angenommen, dass diese Rüstung aus der golden schimmernden Haut eines grimmigen Aurumvorax gefertigt wurde, einer gefräßigen Bestie mit sechs Beinen, die nicht nur Fleisch sondern auch Edelmetalle wie Gold verspeist. Diese Ernährung gewährt der Kreatur einen spektukalären Anblick und unglaubliche Schutzeigenschaften, die auch in die Waffe übergegangen sind.
+
+EIGENSCHAFTEN:
+
+Rüstungsklasse: 6
+RK-Bonus:
+ -3 gg. Klingewaffen
+ -3 gg. Stichwaffen
+RK-Malus:
+ +2 gg. Geschosswaffen
+Mindeststärke: 4
+
+Gewicht: 5
+
+Kann nicht verwendet werden von:
+ Magier
+ Mönch
+ Gestaltwandler
+ Kensai~
+
+@111  = ~Rüstung des Meisterdiebs~
+@112  = ~Der Ursprung dieser Rüstung ist über die Jahre in Vergessenheit geraten. Jahrelang haben die Gildenmeister vieler Diebesorganisationen um dieses Artefakt gekämpft, denn angeblich wird derjenige, der sie besitzt, zum besten Schurken aller Zeiten und Meister der Diebe.
+
+EIGENSCHAFTEN:
+
+Im Schatten verstecken: +75%
+Geschicklichkeit: +2
+
+Rüstungsklasse: 4
+RK-Bonus:
+ -1 gg. Stichwaffen u. Geschosswaffen
+ -2 gg. Klingenwaffen
+Mindeststärke: 6
+
+Gewicht: 8
+
+Kann nur verwendet werden von:
+ Dieb (auch mehrklassig und mit Klassenkombination)~
+
+/* DEPRECATED as of v2.0.0
+@113  = ~Kurzbogen~
+@115  = ~Der Kurzbogen ist die älteste Form eines Bogens, jedoch wurde er nicht als solcher bezeichnet. Der Begriff "Kurzbogen" ist eher eine Bezeichnung für alle Bögen, die nicht als Langbogen gelten. Ein Kurzbogen ist durchschnittlich etwa 1,50 m lang und daher leichter zu handhaben als größere Bögen.
+
+EIGENSCHAFTEN:
+
+Gewicht: 2
+Initiativefaktor: 6
+Fertigkeit: Kurzbogen
+Typ: 2-händig
+
+Kann nicht verwendet werden von:
+- Druiden
+- Klerikern
+- Magiern
+- Mönchen~*/
+@114  = ~Kurzbogen +2 Verteidigung~
+@116  = ~Dieser Kurzbogen wurde entwickelt, um die geringen Schutzmöglichkeiten eines Bogenschützen, wie den Verzicht auf einen Schild, auszugleichen.
+
+EIGENSCHAFTEN:
+
+RK-Bonus: +1
+ETW0-Bonus: -2
+Initiativefaktor: 4
+Fertigkeit: Kurzbogen
+Typ: 2-händig
+Mindeststärke: 3
+
+Gewicht: 2
+
+Kann nicht verwendet werden von:
+ Kleriker
+ Druide
+ Magier
+ Mönch
+ Kensai
+ Ritter~
+
+/* DEPRECATED as of v2.0.0
+@117  = ~Armschützer~
+@119  = ~Armschützer sind dicke Bänder aus Metall oder Leder, die mit Gurten oder Riemen an den Unterarmen befestigt werden. In der Regel kommt die magische Kraft, die die Armschützer besitzen, nur im Kampf zum Tragen, da die meisten Armschützer den Träger vor Verletzungen bewahren oder seine Chancen, den Gegner zu treffen, erhöhen. Es gibt jedoch Ausnahmen, auch wenn diese höchst selten sind.
+
+EIGENSCHAFTEN:
+
+Gewicht: 2~*/
+@118  = ~Handschuhe des Taschendiebveteranen~
+@120  = ~Diese Handschuhe gehörten dem Meisterdieb Urank von Baldurs Tor. Nachdem er ein großes Vermögen angehäuft hatte und Kaufmann geworden war, schwor er sich, niewieder dem Taschendiebstahl nachzugehen, und so verkaufte er seine magischen Handschuhe. Kurz danach verschlechterten sich seine Geschäfte, bis er schließlich vollkommen ruiniert war.
+
+EIGENSCHAFTEN:
+
+Taschendiebstahl: +40 %
+
+Gewicht: 2
+
+Kann nur verwendet werden von:
+ Barde
+ Dieb~
+
+/* DEPRECATED as of v2.0.0
+@121  = ~Umhang~
+@123  = ~Form und Stoff eines Umhangs können beliebig sein. Die herkömmlichste Form besteht aus einem kreisrunden Stück Stoff, in das in der Mitte ein Loch für den Kopf eingearbeitet wurde. Der Umhang wird mit einer Kette, Brosche, Kordel oder Nadel zusammengehalten.~*/
+@122  = ~Schattenumhang~
+@124  = ~Der Schattenumhang wurde angefertigt, um es einem Dieb zu ermöglichen, die Fähigkeiten der Schattendiebe von Amn nachzuahmen. Die Schattenmeister stehen auf der obersten Stufe in der Hierarchie der Schattendiebe.
+
+EIGENSCHAFTEN:
+
+Im Schatten verstecken: +40%
+
+Gewicht: 2
+
+Kann nur verwendet werden von:
+ Dieb (auch mehrklassig und mit Klassenkombination)~
+
+/* DEPRECATED as of v2.0.0
+@125  = ~Dolch~
+@127  = ~Ein typischer Dolch ist mit einer spitzen, normalerweise zweischneidigen Klinge versehen, wodurch er sich von einem Messer unterscheidet. Ein Messer hat nur eine Schneide und ist etwas kürzer als ein Dolch.
+
+EIGENSCHAFTEN:
+
+Schaden: 1W4 (Stich)
+Gewicht: 1
+Initiativefaktor: 2
+Fertigkeit: Dolch
+Typ: 1-händig
+
+Kann nicht verwendet werden von:
+- Klerikern~*/
+@126  = ~Dolch +1 Skorpionstachel~
+@128  = ~Dieser Dolch wurde aus dem Stachel eines Jungskorpions hergestellt, da das Gift junger Skorpione noch giftiger ist als das der ausgewachsenen. Das Gift dieser Klinger breitet sich mit hoher Geschwindigkeit im Körper des Opfers aus, sobald es erst einmal getroffen ist.
+
+EIGENSCHAFTEN:
+
+Schaden: 1W4 +1
+Schadensbonus: 2 Schadenspunkte durch Gift pro Sekunde für 10 Sekunden
+ETW0-Bonus: -1
+Initiativefaktor: 1
+Fertigkeit: Dolch
+Typ: 1-händig
+Mindeststärke: 3
+
+Gewicht: 1
+
+Kann nicht verwendet werden von:
+ Kleriker
+ Tiermeister~
+
+@129  = ~Dolch +2 Todesdolch~
+@130  = ~Dieser Dolch wurde von einem bösen Zauberer geschaffen, der die Klinge für seinen persönlichen Gebrauch mit Todesflüchen belegte. Unglücklicherweise fand er selbst durch diese Waffe den Tod, als er sich beim Öffnen eines Briefumschlags aus Versehen in den Finger schnitt.
+
+EIGENSCHAFTEN:
+
+Bei jedem Treffer 20% Wahrscheinlichkeit, dass das Opfer sofort stirbt (Rettungswurf gg. Tod -3).
+
+Schaden: 1W6 +2 (Stich)
+ETW0-Bonus: -2
+Initiativefaktor: 0
+Fertigkeit: Dolch
+Typ: 1-händig
+Mindeststärke: 3
+
+Gewicht: 1
+
+Kann nicht verwendet werden von:
+ Kleriker
+ Tiermeister~
+
+@131  = ~Kapuze~
+@132  = ~Sericks Kapuze~
+@133  = ~Eine einfache Diebeskapuze, mit der das Gesicht verhüllt werden kann, um unerkannt zu entkommen.~
+@134  = ~Serick war ein berüchtigter Schurke mit vielen Feinden. Da er ein unbesiegbarer Kämpfer war, dem im Duell niemand das Wasser reichen konnte, versuchten seine Gegner ihn hinterrücks zu ermorden, was ihnen jedoch aus nicht näher bekanntem Grund stets misslang.
+
+EIGENSCHAFTEN:
+
+Immunität gegen Hinterhältigen Angriff.
+
+Gewicht: 1
+
+Kann nur verwendet werden von:
+ Dieb (auch mehrklassig und mit Klassenkombination)~
+
+/* DEPRECATED as of v2.0.0
+@135  = ~Stiefel~
+@137  = ~Stiefel werden normalerweise von Schuhmachern handgefertigt. Herkömmliche Stiefel werden mit Hilfe einer Form hergestellt, wohingegen qualitativ hochwertige Stiefel dem jeweiligen Fuß nach Maß angepasst werden.
+
+EIGENSCHAFTEN:
+
+Gewicht: 4~*/
+@136  = ~Stiefel des Verfolgers~
+@138  = ~Unsichtbarkeit ist die stärkste Waffe der Diebe, daher wurden schon viele magische Gegenstände erschaffen, die diese Fähigkeit verstärken. Diese Stiefel wurden jedoch nicht direkt für einen Dieb hergestellt, sondern für einen eifersüchtigen Edelmann, der seiner untreuen Ehefrau nachspionierte. Nachdem er vom Liebhaber seiner Frau ermordet worden war, gingen seine Stiefel im Laufe der Zeit verloren. Einige Leute meinen, dass der genannte Liebhaber ebenjener Darron war, von dem Ihr diese Stiefel erworben habt.
+
+EIGENSCHAFTEN:
+
+Leise bewegen: +30 %
+Im Schatten verstecken: +20%
+
+Gewicht: 4
+
+Kann nur verwendet werden von:
+ Dieb
+ Mönch
+ Waldläufer~
+ 
+@139  = ~Schlangenlederstiefel~
+@140  = ~Lederstiefel dieser Art werden aus den Häuten heiliger Schlangen hergestellt. Sie stammen aus fernen Landen und werden von vielen Adligen hoch geschätzt, da sie durch die ihnen innewohnende Magie gegen Vergiftungen aller Art schützen.
+
+EIGENSCHAFTEN:
+
+Immunität gegen Gift
+RK-Bonus: +1 gg. Geschosswaffen
+
+Gewicht: 4 ~
+
+/* DEPRECATED as of v2.0.0
+@141  = ~Katana~
+@143  = ~Das Katana ist ein Schwert, dessen Klinge nur auf einer Seite scharf ist. Es ist leicht gekrümmt und endet in einer Spitze, die an die Spitze eines Meißels erinnert. Das Katana stellt vermutlich die aufwändigste Form des Schwertes dar. Seine Fertigung ist ein langer, aufwändiger und höchst geheimer Vorgang, den man schon fast als Kunstwerk bezeichnen müsste. Diese Schwerter spielen in der Kultur von Kara-Tur eine wichtige Rolle. Wenn man es wagt, das Katana eines Samurais zu berühren oder gar zu ziehen, beleidigt man den Samurai, dem es gehört, und zieht seinen Zorn auf sich. Es kommt nur äußerst selten vor, dass ein Gaijin, ein Fremder, in den Besitz einer derartigen Waffe kommt. Entweder handelt es sich bei diesem Gaijin dann um den geehrten Freund eines wichtigen Ministers oder um den Mörder eines Samurais.
+
+EIGENSCHAFTEN:
+
+Schaden: 1W10 (Klinge)
+Gewicht: 6
+Initiativefaktor: 4
+Mindeststärke: 6
+Fertigkeit: Katana
+Typ: 1-händig
+
+Kann nicht verwendet werden von:
+- Druiden
+- Klerikern
+- Magiern~*/
+@142  = ~Der Weg des Meister Li~
+@144  = ~Ursprünglich wurde angenommen, dass es nur ein Exemplar dieses handwerklichen Meisterstücks gebe, es stellte sich jedoch heraus, dass mehrere dieser Katanas auf ein Schiff geladen waren, dass vor einigen Jahren an der Schwertküste auf Grund lief. Die meisten Kenner schreiben diese Klingen dem großen Erfinder des fernen Ostens, Meister Hu Li, zu, allerdings ist nur wenig über ihn bekannt.
+
+EIGENSCHAFTEN:
+
+ETW0-Bonus: -2
+Schaden: 1W10 +2
+Schadensbonus: +2 (Säure)
+Initiativefaktor: 1
+Fertigkeit: Katana
+Typ: 1-händig
+Mindeststärke: 6
+
+Gewicht: 4
+
+Kann nicht verwendet werden von:
+ Druide
+ Kleriker
+ Magier
+ Tiermeister~
+
+@145  = ~Drachenzorn, Katana +3~
+@146  = ~Obwohl es wie ein normales Schwert aussieht, hat dieses Katana einen ausgewachsenen Drachen getötet. Die Seele des Untiers ist in die Klinge des Schwertes gefahren und gewährt dieser die Meisterschaft über das Feuer.
+
+EIGENSCHAFTEN:
+
+Der Träger kann 1x tägl. Feuerball wirken.
+
+Schaden: 1W12 +3 (Klinge)
+Schadensbonus: +6 (Feuer)
+ETW0-Bonus: -3
+Initiativefaktor: 1
+Fertigkeit: Katana
+Typ: 1-händig
+Mindeststärke: 6
+
+Gewicht: 4
+
+Kann nicht verwendet werden von:
+ Druide
+ Kleriker
+ Magier
+ Tiermeister~
+
+@147  = ~Bewachte Dimensionskiste~
+@148  = ~Bewachte Dimensionskiste
+
+Grad: 7
+Schule: Beschwörung, Hervorrufung
+Reichweite: Unbegrenzt
+Dauer: Speziell
+Zeitaufwand: 9
+Bereich: Speziell
+Rettungswurf: Speziell
+
+Dieser Zauber ist eine erweiterte Version des Zaubers "Dimensionskiste". Grundsätzlich funktioniert dieser Zauber ähnlich, aber er beinhaltet darüber hinaus einen planaren Wächter, der das Behältnis an seinem Ort zwischen den Ebenen beschützt und andere planare Kreaturen davon abhält, es zu plündern.
+
+Wird der Zauber gewirkt, beschwört dies den planaren Wächter herauf, der dann den Inhalt der Kiste beschreibt. Das Innere des Behälters ist scheinbar nicht aus fester Materie und kann daher uneingeschränkt viele Gegenstände aufnehmen.
+
+Der Wächter ist mit dem Willen des Zauberwirkenden verbunden, er wird aber auf der materiellen Ebene eigenständig kämpfen. Nur planare Wesen werden versuchen die Truhe zu öffnen. Wenn er in dem kurzen Zeitfenster in Gegenwart des Zauberers angegriffen wird, wird er sich selbst verteidigen und jegliche Magie bannen. Falls der Wächter zerstört wird, setzt er sich automatisch nahe der Truhe wieder zusammen, da seine Essenz an sie geknüpft ist, sodass er nur endgültig vernichtet werden kann, wenn die Kiste selbst zerstört wird. Ein weiterer Grund, der den Wächter zwingt die Kiste zu bewachen.~
+
+@149  = ~Statue~
+@150  = ~Wächterstatue~
+@151  = ~Diese Statue stellt ein Wesen dar, das offensichtlich größer als ein Mensch ist. Die Körperhaltung erscheint, als würde das Wesen aus einer Art Flüssigkeit auftauchen, während es etwas Schweres schützend in den Armen hält.
+
+Der Nutzen der Figur ist unbekannt, aber scheint eine Form magischer Energie auszustrahlen.
+
+Gewicht: 15~
+@152  = ~Diese Statue wurde mit einer verbesserten Version des Zaubers Dimensionskiste belegt und kann ein Wächterwesen heraufbeschwören, das den magischen Behälter beschützt.
+
+Die Kiste ist aus verschiedenen edlen Materialien gefertigt, aber ihr wahrer Wert liegt in der Tatsache, dass sie eine unbegrenzte Zahl von Gegenständen aufnehmen kann. Die Dimensionskiste hält sich im Raum zwischen den Ebenen auf, wo sie vor Dieben geschützt ist.
+
+Der Zauberwirkende kann den Wächter 2x tägl. beschwören, um Zugriff auf die Kiste zu erhalten.
+
+Gewicht: 15~
+@153  = ~Wächter~

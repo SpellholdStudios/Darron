@@ -1,237 +1,94 @@
 @0    = ~Darron~
-@1    = ~Anillo~
-@2    = ~Anillo de resistencia a la electricidad~
-@3    = ~Un anillo es una pequeña banda de metal precioso que se utiliza como joya. Algunos anillos poco comunes han tenido encantamientos que confieren varias propiedades mágicas. Estos anillos son muy buscados, especialmente por aquéllos que se dedican a las aventuras.~
-@4    = ~El origen de este anillo es desconocido. Quizás fuera fabricado por un mago que pretendió viajar al plano elemental de aire.
+@1    = ~Este mod no esta disponible para tu juego.~
 
-CARACTERÍSTICAS:
 
-Resistencia a la electricidad: +40%~
-@5    = ~Anillo de fácil apertura~
-@6    = ~Este anillo fue creado por el jefe de una cofradía de ladrones, ya que sus miembros eran muy patosos. Gracias a los poderes mágicos de este anillo cualquier cerradura es fácil de abrir.
+// WeiDU prompts
+// -------------
+@-1000 = ~El mod %TP2_FILE_NAME% tiene~
+@-1001 = ~distintos componentes opcionales.
+Puedes elegir que hacer con ellos a la vez o de uno en uno.
+~
+@-1002 = ~Que hacer con todos los componentes que NO estan instalados?
+[I]Instalar, [S]Ignorar, [A]Preguntar uno por uno. ~
+@-1003 = ~Que hacer con todos los componentes que SI estan instalados?
+[R]Reinstalar, [U]Desinstalar, [S]Ignorar, [A]Preguntar uno por uno. ~
 
-CARACTERÍSTICAS:
+@-1004 = ~Por favor, envia el archivo~
+@-1005 = ~a~
 
-Aptitudes especiales: lanzar Apertura tres veces al día.~
-@7    = ~Armadura de cuero~
-@8    = ~Armadura de aurovórax +2~
-@9    = ~La armadura de cuero, a pesar de la falsa creencia extendida, no es suave y fina como el cuero que se utiliza para las botas de los exploradores o para las túnicas de los druidas. Este tipo de cuero ofrece una protección mejor que la vestimenta habitual.
+@-1006 = ~Instalar Componente [~
+@-1007 = ~]?
+[R]Reinstalar, [N]No Modificar, [U]Desinstalar o [Q]Salir. ~
+@-1008 = ~]?
+[I]Instalar, [N]No Instalar o [Q]Salir. ~
 
-CARACTERÍSTICAS:
+@-1009 = ~Introduce parte del nombre de un modulo: ~
 
-Clase de armadura: 8
-Peso: 15
-No permitido a:
- Mago~
-@10   = ~Se supone que esta armadura de tono dorado está fabricada con la piel de un feroz aurovórax, una bestia similar a un glotón con seis patas que no sólo come carne, sino también metales preciosos. La dieta de la criatura da a su piel un acabado espectacular e increíbles cualidades protectoras, una capacidad de resistencia compartida por la armadura fabricada a partir de ella.
+@-1010 = ~Reinstalando el componente [~
+@-1011 = ~] ~
+@-1012 = ~Reinstalando usando el idioma~
 
-CARACTERÍSTICAS:
+@-1013 = ~Eliminando instalacion antigua de [~
+@-1014 = ~] ...~
+@-1015 = ~ELIMINADO CORRECTAMENTE~
 
-Bonificador de clase de armadura: +3 contra armas cortantes
-Bonificador de clase de armadura: +3 contra armas perforantes
-Clase de armadura: 6
-Peso: 5
-No permitido a:
- Mago~
-@11   = ~Armadura del maestro de los ladrones~
-@12   = ~El origen de esta armadura se ha perdido en el tiempo. Durante años los jefes de las cofradías de ladrones más importantes han luchado por ella, ya que se dice que quien la posea se convertirá en el mejor ladrón de todos los tiempos y podrá ser llamado el maestro de los ladrones.
+@-1016 = ~Instalando~
+@-1017 = ~ERROR Instalando [~
+@-1018 = ~], revirtiendo a estado anterior~
+@-1019 = ~INSTALADO CORRECTAMENTE ~
+@-1020 = ~Ignorando~
+@-1021 = ~Eliminando [~
+@-1022 = ~] (componente #~
+@-1023 = ~)~
+@-1024 = ~ELIMINADO CORRECTAMENTE [~
 
-CARACTERÍSTICAS:
+@-1025 = ~]?
+[R]Reinstalar, [N]No Modificar, [U]Desinstalar, [Q]Salir o elegir:~
+@-1026 = ~]?
+[N]No, [Q]Salir o elegir:~
+@-1027 = ~ (instalado)~
 
-Clase de armadura: 4
-Bonificador +2 a la Destreza
-Especial: +75% ocultación en las sombras
-Peso: 8
-Sólo permitido a:
- Ladrón (de clase única, dual o múltiple)~
-@13   = ~Arco corto~
-@14   = ~Arco corto +2 de Defensa~
-@15   = ~Los arcos cortos fueron los primeros en desarrollarse, aunque no recibían este nombre. Éste es un término que se aplica a todo lo que no sea un arco largo. Las varas de los arcos cortos son de unos 150 centímetros de media. Con el paso del tiempo, se hicieron intentos de mejorar el alcance de los arcos. Esto se hacía alargando las varas o aumentando la flexibilidad sin cambiar la longitud. El primer caso dio como resultado el arco largo.
+@-1028 = ~Quieres que se muestren los componentes de [~
+@-1029 = ~]?
+[Y]Si, [N]No. ~
 
-CARACTERÍSTICAS:
+@-1030 = ~]?
+elegir:~
+@-1031 = ~]?
+[R]Reinstalar, [N]No Modificar, [Q]Salir o elegir:~
+@-1032 = ~NO INSTALADO DEBIDO A ERRORES~
+@-1033 = ~INSTALADO CON ADVERTENCIAS ~
+@-1034 = ~Quieres que se muestre el readme? [Y]Si, [N]No. ~
+@-1035 = ~Usando idioma~
 
-Peso: 2
-Factor de velocidad: 6
-Talento marcial: Arco
-No permitido a:
- Clérigo
- Druida
- Mago~
-@16   = ~Este arco fue creado para compensar la falta de escudo cuando se usa. Dotando así a su propietario de una pequeña tirada de salvación.
+@-1036 = ~Ignorando GRUPO [~
+@-1037 = ~] por no cumplir los requisitos.~
 
-CARACTERÍSTICAS:
+@-1038 = ~[A]Preguntar por cada componente, [S]Ignorar todo, o elegir una seleccion predefinida:~
+@-1039 = ~[A]Preguntar por cada componente, [R]Reinstalar la configuracion actual, [U]Desinstalar todo, [S]Ignorar todo, o elegir una seleccion predefinida:~
 
-Especial: +1 a la salvación por armadura.
-GAC0: Bonificador +2
-Peso: 2
-Factor de velocidad: 5
-Talento marcial: Arco corto
-Tipo: a dos manos
-No permitido a:
- Clérigo
- Druida
- Mago~
-@17   = ~Brazales~
-@18   = ~Guantes de robar mayores~
-@19   = ~Los brazales son gruesas bandas de metal o de cuero que van atadas con correas al antebrazo del personaje. Por lo general, la magia infundida en los brazales sólo sirve durante el combate, ya que la mayoría de ellos sirven para proteger a su portador de las lesiones y aumentar las posibilidades de golpear al contrincante. Sin embargo hay excepciones y cada día se producen más.~
-@20   = ~Estos guantes pertenecieron al gran ladrón Urank de Puerta de Baldur. Tras amasar una gran fortuna se convirtió en comerciante y juró que no robaría más, vendiendo sus guantes especiales de robar para no tener tentaciones. Poco después sus negocios fueron mal y se arruinó por completo.
+@-1040 = ~
+Por favor, elige el idioma en que deseas jugar el juego.
+Si quieres cambiar el idioma del juego mas adelante, tendras que editar el archivo weidu.conf y reinstalar tus mods.
+~
+@-1041 = ~Checo~
+@-1042 = ~Aleman~
+@-1043 = ~Ingles~
+@-1044 = ~Espanol~
+@-1045 = ~Frances~
+@-1046 = ~Italiano~
+@-1047 = ~Polaco~
+@-1048 = ~Portugues~
+@-1049 = ~Turco~
+@-1050 = ~Japones~
+@-1051 = ~Coreano~
+@-1052 = ~Chino simplificado~
 
-CARACTERÍSTICAS:
+@-1060 = ~
+Este juego esta disponible en muchos idiomas, pero WeiDU no sabe que idioma se ha usado durante la instalacion de este mod.
 
-Robar: +40%~
-@21   = ~Manto~
-@22   = ~Manto de las Sombras~
-@23   = ~El manto puede tener cualquier forma y hacerse con cualquier tipo de tela. La forma más habitual es una pieza redonda de tela con un agujero en el centro para la cabeza, con la tela drapeada desde el cuello con una cadena, un broche, un cordón o alfileres.~
-@24   = ~El Manto de la Sombras fue creado para que lo usaran los Maestros de las Sombras de Amn. Los Maestros de Sombras son la orden más alta dentro de la jerarquía de los Ladrones de las Sombras.
-
-Especial: +40% ocultación en las sombras
-Sólo permitido a:
- Ladrón (de clase única, dual o múltiple)~
-@25   = ~Daga~
-@26   = ~Aguijón venenoso +1~
-@27   = ~La daga típica tiene una hoja puntiaguda de doble filo, al contrario que el cuchillo, que sólo tiene un filo y es un poco más corto que la daga.
-
-CARACTERÍSTICAS:
-
-Daño: 1D4
-Tipo de daño: Perforante
-Peso: 1
-Factor de velocidad: 2
-Talento marcial: Daga
-No permitido a:
- Clérigo~
-@28   = ~Esta daga fue creada a partir del aguijón de una criatura. Permitiendo introducir su veneno a su víctima cuando es golpeada con ella.
-
-CARACTERÍSTICAS:
-
-Daño: 1D4 + 1
-Daño por veneno: 2 puntos de daño por segundo
-Duración del veneno: 10 segundos
-GAC0: Bonificador +1
-Tipo de daño: Perforante
-Peso: 1
-Factor de velocidad: 1
-Talento marcial: Daga
-No permitido a:
- Clérigo~
-@29   = ~Daga de muerte +2~
-@30   = ~Esta daga fue creada por un malvado nigromante con terribles hechizos de muerte, para usarla como arma personal. Encontrando él mismo la muerte a manos de la daga, al pincharse en un dedo cuando usaba esta para abrir un sobre.
-
-CARACTERÍSTICAS:
-
-Aptitudes de combate:
- 20% con cada golpe de que la víctima deba salvarse contra muerte mágica (con -3) o morir de inmediato.
-Daño: 1D4 + 2
-GAC0: Bonificador +2
-Peso: 1
-Factor de velocidad: 0
-Talento marcial: Daga
-Tipo: a una mano
-No permitido a:
- Clérigo~
-@31   = ~Capucha~
-@32   = ~Capucha de Serick~
-@33   = ~Una simple capucha de ladrón, útil para cubrirse el rostro y pasar desapercibido.~
-@34   = ~Serick era un afamado ladrón que tenía muchos enemigos. Era un luchador invencible, sin rival en el combate, así que sus enemigos siempre intentaban apuñalarle por la espalda. Pero por alguna extraña razón siempre fallaban.
-
-CARACTERÍSTICAS:
-
-El portador es inmune a apuñalamiento.
-Peso: 1
-Sólo permitido a:
- Ladrón (de clase única, dual o múltiple)~
-@35   = ~Botas~
-@36   = ~Botas de sigilo mayores~
-@37   = ~Las botas las suelen hacer a mano los zapateros. Las botas normales se hacen partiendo de un molde, pero las buenas se diseñan para el pie de alguna persona en particular.
-
-CARACTERÍSTICAS:
-
-Peso: 4~
-@38   = ~El sigilo es la mejor arma de muchos ladrones por eso muchos han creado objetos mágicos especiales para mejorarlo. Estas botas no fueron creadas originariamente para un ladrón, fueron creadas para un noble que se dedicaba a espiar cómo su mujer le era infiel . Asesinado por el amante de su esposa las botas se perdieron en el tiempo hasta ahora. Hay quien dice que el amante fue el propio Darron.
-
-CARACTERÍSTICAS:
-
-Bonificador de sigilo: +50%
-Peso: 4~
-@39   = ~Botas de serpiente~
-@40   = ~Las botas de serpiente están fabricadas con piel de serpiente sagrada. Traída de tierras lejanas son muy apreciadas por muchos nobles ya que con ellas puestas evitan ser envenados, gracias a las propiedades mágicas que poseen las botas.
-
-CARACTERÍSTICAS:
-
-Aptitudes poseídas: Inmunidad a venenos
-Bonificador a la Clase de Armadura: +1 contra armas perforadoras
-Peso: 4~
-@41   = ~Katana~
-@42   = ~La Senda del Maestro Li~
-@43   = ~La katana es una espada curvada con un único filo y acabada en punta. Quizá sea una de las mejores espadas que se han fabricado nunca. Los pasos de su creación, un proceso largo y secreto, son más una forma de arte que cualquier otra cosa. Su hoja es una de las facetas más importantes de la cultura de Kara-Tur. Tocar o coger la katana de un samurái es un insulto que atraerá su ira. Que un gaijin o extranjero posea una de estas espadas es algo raro. O el gaijin ha sido honrado por un importante ministro o ha asesinado a un samurái.
-
-CARACTERÍSTICAS:
-
-Daño: 1D10
-Tipo de daño: Cortante
-Peso: 6
-Factor de velocidad: 4
-Talento marcial: Katana
-Tipo: a una mano
-No permitido a:
- Clérigo
- Druida
- Mago~
-@44   = ~Una vez se creyó que sólo había un ejemplar de la destreza de este artesano, pero ahora se sabe que varias katanas de este tipo están relacionadas con una nave que encalló en la Costa de la Espada ya hace algunos años. Todas llevan el sello del Maestro Hu Li, el gran artífice oriental, aunque poco más se sabe de él.
-
-CARACTERÍSTICAS:
-
-GAC0: Bonificador +2
-Daño: 1d10 + 2, +2 de daño por ácido
-Tipo de daño: Cortante
-Peso: 4
-Factor de velocidad: 1
-Talento marcial: Katana
-Tipo: a una mano
-No permitido a:
- Clérigo
- Druida
- Mago~
-@45   = ~Furia del Dragón Katana +3~
-@46   = ~Aunque en apariencia parece una espada normal, esta katana dio muerte a un terrible dragón. El alma del dragón quedo encerrada dentro de la espada, dándole a ésta terribles poderes sobre el dominio del fuego.  
-
-CARACTERÍSTICAS:
-
-Especial: Lanza una bola de fuego el día.
-GAC0: +3
-Daño: 1d12 + 3, +6 de daño por fuego
-Tipo de daño: Cortante
-Peso: 4
-Factor de velocidad: 1
-Talento marcial: Katana
-Tipo: a una mano
-No permitido a:
- Clérigo
- Druida
- Mago~
-@47   = ~Cofre dimensional custodiado~
-@48   = ~Cofre dimensional custodiado
-(Conjuración/Convocación, Invocación/Evocación)
-Nivel: 7
-Alcance: Ilimitado
-Duración: Especial
-Tiempo de lanzamiento: 9
-Área de efecto: Especial
-Tirada de salvación: Especial
-
-Este conjuro es una versión avanzada del conjuro "Cofre dimensional". Básicamente, el conjuro funciona de forma similar, pero incorpora un guardián planar para que custodie el cofre en su localización entre los planos, evitando que sea inspeccionado y saqueado por criaturas nativas de dicho lugar. 
-
-Cuando se lanza el conjuro, éste invocará al Guardián del Cofre, que expondrá el contenido del Cofre al mago. El interior de este cofre prácticamente carece de fondo, y puede almacenar objetos cualesquiera.
-
-El Guardián está ligado a la voluntad del mago, pero no batallará mientras permanezca en el plano Primario o cualesquiera al que sea llamado: sólo combatirá a las criaturas planares que intenten abrir el cofre. Sin embargo, si es atacado en el breve plazo que permanezca junto al mago, se defenderá, atacando a su agresor y rompiendo cualquier tipo de obligación mágica. Si es destruido, se recompondrá junto al cofre en otro plano, pues su esencia está ligada al mismo y sólo será realmente destruido cuando se destruya el cofre: otra razón más que le obliga a custodiar el Cofre.~
-@49   = ~Estatua~
-@50   = ~Estatua del Guardián~
-@51   = ~Esta estatua representa algún tipo de ser de un tamaño superior al de un humano. Su pose hace pensar que se está abriendo paso a través de un fluido mientras sostiene algo pesado entre los brazos.
-
-Su utilidad es desconocida, pero late con algún tipo de poder mágico.~
-@52   = ~Esta estatua ha sido hechizada con un conjuro mejorado de Cofre dimensional. Al usarla, la estatua llamará a una criatura llamada el Guardián, cuyo cometido es proteger un cofre mágico. 
-
-Este cofre está fabricado con los materiales más valiosos, pero su poder consiste en que es capaz de almacenar una gran cantidad de objetos. El cofre reside en una localización interplanar, protegido de cualquier hurto. 
-
-El mago puede llamar a su lado al Guardián hasta dos veces al día para poder introducir y sacar objetos de su interior, a voluntad.~
-@53   = ~Guardián~
+Por favor, indica que idioma usaste durante la instalacion del mod. Tu eleccion se usara hasta que WeiDU termine, pero no se guardara.
+~
+@-1061 = ~
+Usando~
+@-1062 = ~ y ~

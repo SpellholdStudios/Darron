@@ -35,9 +35,8 @@ ALWAYS
 	/* --------------------------------------------------------------------------------------------- *
 	 *    Convert strings to UTF-8 for BGEE/BG2EE                                                    *
 	 *    No exception, everything needs to be converted                                             *
-	 *    setup.tra contains in game texts as well as installation texts and needs to be converted   *
 	 * --------------------------------------------------------------------------------------------- */
-	ACTION_DEFINE_ARRAY cr_reload BEGIN setup END
+	ACTION_DEFINE_ARRAY cr_reload BEGIN setup items END
 	// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
 	ACTION_DEFINE_ARRAY cr_noconvert BEGIN END
 	LAF HANDLE_CHARSETS
@@ -56,18 +55,22 @@ AUTO_TRA ~darron/lang/%s~
 LANGUAGE ~Espanol (por Eslizon)~
          ~spanish~
          ~darron/lang/spanish/setup.tra~
+         ~darron/lang/spanish/items.tra~
 
 LANGUAGE ~English (translation by Lollorian)~
          ~english~
          ~darron/lang/english/setup.tra~
+         ~darron/lang/english/items.tra~
 
 LANGUAGE ~Italiano (traduzione di ilot)~
 		 ~italian~
-		 ~darron/lang/italian/setup.tra~
+         ~darron/lang/italian/setup.tra~
+         ~darron/lang/italian/items.tra~
 
 LANGUAGE ~Deutsch~
 		 ~german~
-		 ~darron/lang/german/setup.tra~
+         ~darron/lang/german/setup.tra~
+         ~darron/lang/german/items.tra~
 
 
 /* ======================= *
@@ -81,8 +84,8 @@ REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @1	// ~You must have BG2, ToB,
  *  Copy BAMs or convert them to EE  *
  * --------------------------------- */
 ACTION_IF is_ee BEGIN
-	INCLUDE ~%MOD_FOLDER%/lib/gw_convert_inventory_bam_to_ee.tpa~	// Loads function converting inventory BAMs to EE.
-	OUTER_SPRINT file-exc ~eslihel1 ~	// Special case: description icons don't need to be converted.
+	INCLUDE ~%MOD_FOLDER%/lib/gw_convert_inventory_bam_to_ee.tpa~  // Loads function converting inventory BAMs to EE.
+	OUTER_SPRINT file-exc ~eslihel1 ~                              // Special case: description icons don't need to be converted.
 	ACTION_BASH_FOR ~%MOD_FOLDER%/bams/~ ~^.+\.bam$~ BEGIN
 		ACTION_TO_LOWER %BASH_FOR_FILE%
 		ACTION_TO_LOWER %BASH_FOR_RES%
@@ -290,8 +293,10 @@ COPY_EXISTING ~tooltip.2da~ ~override~
 	PRETTY_PRINT_2DA
 BUT_ONLY
 
-// Merchant (Darron) and New store
-// -------------------------------
+
+/* --------------------------------- *
+ *  Merchant (Darron) and New store  *
+ * --------------------------------- */
 COPY ~darron/cre/darron.cre~ ~override~
 	SAY NAME1 @100
 	SAY NAME2 @100
@@ -304,5 +309,14 @@ EXTEND_BOTTOM ~ar0307.bcs~ ~darron/bcs/esdarron.bcs~
 
 COMPILE ~darron/d/darron.d~
 
-COPY ~darron/CRE/elfo09l.bmp~ ~portraits/elfo09l.bmp~
-COPY ~darron/CRE/elfo09s.bmp~ ~portraits/elfo09s.bmp~
+
+/* ---------------------- *
+ *  Installing portraits  *
+ * ---------------------- */
+ACTION_IF is_ee BEGIN
+	COPY ~darron/cre/elfo09ee.bmp~ ~override/elfo09s.bmp~
+	COPY ~darron/cre/elfo09ee.bmp~ ~override/elfo09l.bmp~
+END ELSE BEGIN
+	COPY ~darron/cre/elfo09s.bmp~ ~override~
+	COPY ~darron/cre/elfo09l.bmp~ ~override~
+END

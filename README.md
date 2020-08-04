@@ -139,7 +139,7 @@ If you wish to translate the mod, have a suggestion, or should encounter any bug
 
 ## <a name="versions" id="versions"></a>Version History
 
-##### Version 2.0.0 (August, 2020)
+##### Version 2.0.0 (August 4, 2020)
 
 - Added *darron.ini* metadata file to support AL|EN's "Project Infinity".
 - Renamed *Setup-DARRON.tp2* -> *darron.tp2* and moved it to top mod folder to support AL|EN's "Project Infinity".
@@ -159,7 +159,7 @@ If you wish to translate the mod, have a suggestion, or should encounter any bug
 - Added French translation (Gwendolyne).
 - Added Russian translation (BWP Russian Textpack team).
 - Split setup.tra file into separate thematic files for more comfortable readability
-- TODO Updated and renamed readme file to *darron-readme-spanish.txt*, wrote a new English readme, then moved them into new "*readme*" folder.
+- Updated and renamed readme file to *darron-readme-spanish.txt*, wrote a new English readme, then moved them into new "*readme*" folder.
 - Removed useless "*backup*" folder.
 - Reorganized mod architecture tree: created or renamed folders to sort files according to their types.
 - Lower cased files.

@@ -4,40 +4,58 @@
 *    Eslizon ( Drizzt905@hotmail.com )    *
 *******************************************
 
-
-1. INTRODUCTION
-===============
-
-Darron is in charge of negotiating the special goods of the Shadow Thieves. You can find him in the basement of the thieves' guild in the harbor district (AR0307 X=1195 y=1654).
-To get to it you must make a pact with the thieves and get the key to the basement.
-
-
-2. INSTALLATION
-===============
-
-Standard for WeiDU mods. Unpack contents of archive in your game folder, and run setup-darron.exe.
-
-
-3. THANKS AND CREDITS
-=====================
-
-- Gwendolyne: French translation and EE compatibility.
-- BWP Russian Textpack team: Russian translation.
-- ilot: Italian translation.
-- Lollorian: English translation.
-- AL|EN: Wrote Infinity Auto Packager tool which automatically provides Windows, Linux and Mac versions in the same archive file.
 - Contact SHS: http://www.shsforums.net/topic/60916-darron-updated-to-v200-with-new-translations-and-ee-compatibility/
 - Download SHS: http://www.shsforums.net/files/file/842-darron/
 - Download GitHub: https://github.com/SpellholdStudios/Darron/releases/latest
 
 Deprecated as of v2.0.0
 - Web Clan REO: http://www.clanreo.net/
+Soporte dado por Clan REO: http://www.clanreo.net/
 
 
-4. VERSION HISTORY
-==================
+1. Instalación
+==============
 
-Version 2.0.0 (August 4, 2020)
+Descomprime el zip donde tengas instalado el juego.
+Ejecuta el exe (Darron.exe) y sigue los pasos de instalación.
+Para desinstalar vuelve a ejecutar el exe y sigue los pasos para su desinstalación.
+
+
+2. Compatibilidades
+===================
+
+Es compatible con cualquier mod. Menos con las conversiones totales como Epic Endeavours.
+
+
+3. Sobre el Mod
+===============
+
+Darron es el encargado de negociar las mercancías especiales de los ladrones de las sombras.
+Se encuentra en el sótano de la cofradía de los ladrones en el distrito del puerto (area=AR0307 X=1195 y=1654).
+Para llegar hasta el deberás hacer el pacto con los ladrones y conseguir la llave del sótano.
+Darron vende las siguientes mercancias:
+
+Armadura de aurovórax +2
+Armadura del maestro de los ladrones
+Anillo de resistencia a la electricidad
+Anillo de fácil apertura
+Arco corto +2 de Defensa
+Guantes de robar mayores
+Manto de las Sombras
+Aguijón venenoso +1
+Daga de muerte +2
+Capucha de Serick
+Botas de sigilo mayores
+Botas de serpiente
+La Senda del Maestro Li
+Furia del Dragón Katana +3
+Cofre Dimensional Custodiado (Realizado por Riojano2002)
+
+
+4. Historial de versiones
+=========================
+
+Versión 2.0.0 (August 4, 2020)
 ------------------------------
 - Added darron.ini metadata file to support AL|EN's "Project Infinity".
 - Renamed Setup-DARRON.tp2 -> darron.tp2 and moved it to top mod folder to support AL|EN's "Project Infinity".
@@ -121,24 +139,19 @@ Items updates:
 	- Fixed item description: added missing weight (15).
 	- Added missing Monk restriction flag.
 
-Version 1.6 (August 31, 2011)
------------------------------
-- Added German translation.
+Versión 1.6 (August 31, 2011)
+- Añadida la traducción al alemán.
 
-Version 1.5.1 (March 28, 2010)
-------------------------------
-- Revised texts.
+Versión 1.5.1 (March 28, 2010)
+- Textos revisados.
 
-Version 1.5 (December 22, 2009)
--------------------------------
-- Added Italian translation by ilot.
+Versión 1.5 (December 22, 2009)
+- Añadida la traducción al italiano hecha por Ilot.
 
-Version 1.4 (September 24, 2009)
---------------------------------
-- Added English translation by Lollorian.
-- Fixed texts.
-- Traified.
+Versión 1.4 (September 24, 2009)
+- Codificados los textos en archivos .tra.
+- Textos revisados.
+- Añadida la traducción al ingles hecha por Lollorian.
 
-Version 1
----------
+Versión 1
 - Initial release.

@@ -5,16 +5,21 @@
 // WeiDU prompts
 //--------------
 @-1000= "Il mod %TP2_FILE_NAME% ha"
-@-1001= "diversi componenti opzionali.\nPer far prima, si può scegliere di applicare una medesima azione a tutti i componenti piuttosto che trattarli singolarmente..\n"
-@-1002= "Che cosa vuoi fare con quei componenti NON ANCORA installati?\n[I] Installarli,  [S] Saltarli, [A] Trattarli singolarmente?"
-@-1003= "Che cosa vuoi fare con quei componenti GIÀ installati?\n[R] Reinstallarli, [U] Rimuoverli, [S] Saltarli, [A] Trattarli singolarmente? "
+@-1001= "diversi componenti opzionali.\nPer far prima, si può scegliere di applicare una medesima azione a tutti i componenti piuttosto che trattarli singolarmente.
+"
+@-1002= "Che cosa vuoi fare con quei componenti NON ANCORA installati?
+[I] Installarli,  [S] Saltarli, [A] Trattarli singolarmente?"
+@-1003= "Che cosa vuoi fare con quei componenti GIÀ installati?
+[R] Reinstallarli, [U] Rimuoverli, [S] Saltarli, [A] Trattarli singolarmente? "
 
 @-1004= "Fai una copia di backup del file:"
 @-1005= "e cerca aiuto qui:"
 
 @-1006= "Installazione del componente ["
-@-1007= "]?\n[R] Reinstallazione, [N] Nessun cambiamento,  [U] Rimozione o [Q] Termine del processo di installazione? "
-@-1008= "]?\n[I] Installazione, [N] Nessun cambiamento o [Q] Termine del processo di installazione? "
+@-1007= "]?
+[R] Reinstallazione, [N] Nessun cambiamento,  [U] Rimozione o [Q] Termine del processo di installazione? "
+@-1008= "]?
+[I] Installazione, [N] Nessun cambiamento o [Q] Termine del processo di installazione? "
 
 @-1009= "Inserisci part del nome del modulo: "
 
@@ -36,15 +41,20 @@
 @-1023= ")"
 @-1024= "RIMOZIONE RIUSCITA ["
 
-@-1025= "]?\n[R] Reinstallazione, [N] Nessun cambiamento, [U] Rimozione, [Q] Termine del processo di installazione o selezionare una delle seguenti opzioni:"
-@-1026= "]?\n[N] No, [Q] Termine del processo di installazione o selezionare una delle seguenti opzioni:"
+@-1025= "]?
+[R] Reinstallazione, [N] Nessun cambiamento, [U] Rimozione, [Q] Termine del processo di installazione o selezionare una delle seguenti opzioni:"
+@-1026= "]?
+[N] No, [Q] Termine del processo di installazione o selezionare una delle seguenti opzioni:"
 @-1027= " (selezione corrente="
 
 @-1028= "Vuoi trattare i componenti di ["
-@-1029= "]?\n[Y] Si, [N] No? "
+@-1029= "]?
+[Y] Si, [N] No? "
 
-@-1030= "]?\nSeleziona una delle seguenti opzioni:"
-@-1031= "]?\n[R] Reinstallazione, [N] Nessun cambiamento,  [Q] Termine del processo di installazione o selezionare una delle seguenti opzioni:"
+@-1030= "]?
+Seleziona una delle seguenti opzioni:"
+@-1031= "]?
+[R] Reinstallazione, [N] Nessun cambiamento,  [Q] Termine del processo di installazione o selezionare una delle seguenti opzioni:"
 @-1032= "INSTALLAZIONE NON EFFETTUATA A CAUSA DI ERRORI"
 @-1033= "INSTALLAZIONE COMPLETATA MA CON AVVERTIMENTI    "
 @-1034= "vuoi vedere il file leggimi? [Y] Si, [N] No"
@@ -56,7 +66,9 @@
 @-1038= "[A] Trattare singoli componenti, [S] Saltare tutto, o scegliere una alternativa predefinita:"
 @-1039= "[A] Trattare singoli componenti, [R] Reinstallare la configurazione corrente, [U] Rimuovere tutto, [S] Saltare tutto, o scegliere una alternativa predefinita:"
 
-@-1040= "\nScegli la lingua in cui giocare.\nSe vorrai giocare successivamente in un'altra lingua dovrai modificare il file weidu.conf e reinstallare le modifiche selezionate.\n"
+@-1040= "
+Scegli la lingua in cui giocare.\nSe vorrai giocare successivamente in un'altra lingua dovrai modificare il file weidu.conf e reinstallare le modifiche selezionate.
+"
 @-1041= "Cecoslovacco"
 @-1042= "Tedesco"
 @-1043= "Inglese"
@@ -72,6 +84,11 @@
 @-1053= "Russo"
 @-1054= "Ucraino"
 
-@-1060= "\nQuesto gioco è disponibile in diverse Lingue, ma WeiDU non sa quale Lingua è stata scelta quando questa modifica è stata installata.\n\nIndica quale Lingua era in uso al momento dell'installazione di questa modifica. La tua scelta rimarrà valida fintanto che WeiDU è attivo ma non può essere salvata permanentemente.\n"
-@-1061= "\nSto usando"
+@-1060= "
+Questo gioco è disponibile in diverse Lingue, ma WeiDU non sa quale Lingua è stata scelta quando questa modifica è stata installata.
+
+Indica quale Lingua era in uso al momento dell'installazione di questa modifica. La tua scelta rimarrà valida fintanto che WeiDU è attivo ma non può essere salvata permanentemente.
+"
+@-1061= "
+Sto usando"
 @-1062= " e "

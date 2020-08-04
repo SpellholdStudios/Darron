@@ -15,8 +15,11 @@ Baldur's Gate Trilogy and EET<h3>
 **Mod Website:** <a href="http://www.shsforums.net/forum/234-miscellaneous-released-mods/">Spellhold Studios</a>  
 **Mod Forum:** <a href="http://www.shsforums.net/topic/60916-darron-updated-to-v200-with-new-translations-and-ee-compatibility/">Darron</a><br>
 
+## 
 
 **Note:** This mod was first released at <a href="http://www.clanreo.net/">Clan REO</a> and has been officially mirrored at <a href="http://www.shsforums.net/files/category/95-clan-reo-mirror/">Spellhold Studios Clan REO mirror</a> by <a href="http://www.shsforums.net/user/11965-ancalagon-el-negro/">Ancalagon el Negro</a>.<br>
+
+## 
 
 [Read the mod's readme](https://spellholdstudios.github.io/readmes/darron-readme-english.txt)
 
@@ -140,11 +143,12 @@ If you wish to translate the mod, have a suggestion, or should encounter any bug
 
 - Added *darron.ini* metadata file to support AL|EN's "Project Infinity".
 - Renamed *Setup-DARRON.tp2* -> *darron.tp2* and moved it to top mod folder to support AL|EN's "Project Infinity".
-- TODO Replaced `AUTHOR` keyword with `SUPPORT`.
+- Replaced `AUTHOR` keyword with `SUPPORT`.
+- Added `README` command in tp2.
 - Added `HANDLE_CHARSETS` function to convert string entries for EE games.
 - Added `REQUIRE_PREDICATE` conditions to avoid installing the mod in inaccurate games.
 - Added component `DESIGNATED` number and "*darron*" `LABEL`.
-- Added native BG2:EE, EET, 1PP and ToBEx compatibility.
+- Added native BG2:EE, EET, 1pp and ToBEx compatibility.
 - Provided a Darron portrait for EE games.
 - Converted inventory BAMs to EE: This feature attempts to modify traditional inventory BAMs so that both the large and small icons are utilized by the EE games. The inventory BAM must have two sequences, the first containing the "large" inventory icon frame and the second containing the "small" inventory icon frame to be processed. Inventory icon BAMs in the bam folder that meet these requirements are patched and saved back to the *override* folder.
 - ...
@@ -153,7 +157,7 @@ If you wish to translate the mod, have a suggestion, or should encounter any bug
 - Added French translation (Gwendolyne).
 - Added Russian translation (BWP Russian Textpack team).
 - Split setup.tra file into separate thematic files for more comfortable readability
-- TODO Updated and renamed readme file to *darron-readme-%LANGUAGE%.txt*, then moved it into new "*readme*" folder.
+- TODO Updated and renamed readme file to *darron-readme-spanish.txt*, write a new English readme, then moved them into new "*readme*" folder.
 - Removed useless "*backup*" folder.
 - Reorganized mod architecture tree: created or renamed folders to sort files according to their types.
 - Lower cased files.
@@ -179,15 +183,15 @@ If you wish to translate the mod, have a suggestion, or should encounter any bug
 	- Fixed wrong AC values.
 	- Added 1pp compatibility if *Smart Avatar & Armour Switching* component [113] is installed.
 - <ins>Armor of the Master Thief</ins> (esliarm1.itm):
-	- Fixed wrong description: it is a studded leather, not a leather armor (:wink:). Added missing Strength requirement.
+	- Fixed wrong description: it is a studded leather, not a leather armor :wink:. Added missing Strength requirement.
 	- Added 1pp compatibility if *Smart Avatar & Armour Switching* component [113] is installed.
 - <ins>Short Bow +2 Defense</ins> (eslibow0.itm):
 	- Fixed item description: added missing required Strength (3), class and kit restrictions. Fixed wrong Speed Factor (4 - was 5).
 	- Fixed wrong ability header icon: replaced ibow06 with eslibow0.
 	- EE games: added Shaman usability flag (replaced BIT30 flag with an op#319 equipped effect).
-	- Added Shortbow (BS) animation and gbow02 ground icon for EE game or if 1PP is installed.
+	- Added Shortbow (BS) animation and gbow02 ground icon for EE game or if 1pp is installed.
 - <ins>Veteran Pickpocketer's Gloves</ins> (eslibra0.itm):
-	- Fixed wrong description: they are gloves, not bracers (:wink:). Added missing weight and class restrictions.
+	- Fixed wrong description: they are gloves, not bracers :wink:. Added missing weight and class restrictions.
 	- Added missing class restriction flag.
 - <ins>Cloak of Shadows</ins> (esliclo0.itm):
 	- Fixed item description: added missing weight (2) and class restrictions.
@@ -195,12 +199,12 @@ If you wish to translate the mod, have a suggestion, or should encounter any bug
 - <ins>Dagger +1 Scorpion Sting</ins> (eslidag0.itm):
 	- Fixed item description: added missing features.
 	- EE compatibility: added immunity for opponents immune to poison (op#324).
-	- Added 1PP compatibility to harmonize colors item with EE games and classical 1PP modded games.
+	- Added 1pp compatibility to harmonize colors item with EE games and classical 1pp modded games.
 - <ins>Dagger +2 Death Dagger</ins> (eslidag1.itm):
 	- Fixed item description: added missing features.
-	- Added 1PP compatibility to harmonize colors item with EE games and classical 1PP modded games.
+	- Added 1pp compatibility to harmonize colors item with EE games and classical 1pp modded games.
 - <ins>Serick's Hood</ins> (eslihel0.itm):
-	- Added EE and ToBEx item flag: EE/Ex: Toggle critical hits flag (BIT25).
+	- Added EE and ToBEx item flag: *EE/Ex: Toggle critical hits* flag (BIT25).
 - <ins>Veteran Tracker's Boots</ins> (eslibot0.itm):
 	- Fixed item description: added missing features and fixed wrong Stealth bonus description.
 	- Added missing Barbarian restriction flag.
@@ -211,7 +215,7 @@ If you wish to translate the mod, have a suggestion, or should encounter any bug
 - <ins>Katana +3 Dragon Fury</ins> (esliswo1.itm):
 	- Fixed item description: added missing required strength and Beast Master restriction.
 	- Fireball ability: added Break Sanctuary flag (BIT9) for EE games.
-	- Added 1PP compatibility to harmonize colors item with EE games and classical 1PP modded games.
+	- Added 1pp compatibility to harmonize colors item with EE games and classical 1pp modded games.
 	- Appended tooltip.2da: *Katana +3 Dragon Fury - Fireball*.
 - <ins>Guarded Dimensional Chest</ins> (servidor.itm):
 	- Fixed item description: added missing weight (15).
@@ -233,7 +237,7 @@ If you wish to translate the mod, have a suggestion, or should encounter any bug
 
 ##### Version 1.5 (December 22, 2009)
 
-- Added Italian translation by Ilot (thank you!!!).
+- Added Italian translation by ilot.
 
 ## 
 

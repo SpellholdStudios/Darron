@@ -2,6 +2,8 @@ BACKUP ~darron/backup~
 // AUTHOR ~Eslizon at Drizzt905@hotmail.com~
 SUPPORT ~Spellhold Studios at http://www.shsforums.net/topic/60916-darron-updated-to-v200-with-new-translations-and-ee-compatibility/~
 
+README ~darron/readme/darron-readme-%LANGUAGE%.txt~ ~darron/readme/darron-readme-english.txt~
+
 VERSION ~v1.6~
 
 ALWAYS

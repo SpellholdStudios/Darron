@@ -151,13 +151,15 @@ If you wish to translate the mod, have a suggestion, or should encounter any bug
 - Added native BG2:EE, EET, 1pp and ToBEx compatibility.
 - Provided a Darron portrait for EE games.
 - Converted inventory BAMs to EE: This feature attempts to modify traditional inventory BAMs so that both the large and small icons are utilized by the EE games. The inventory BAM must have two sequences, the first containing the "large" inventory icon frame and the second containing the "small" inventory icon frame to be processed. Inventory icon BAMs in the bam folder that meet these requirements are patched and saved back to the *override* folder.
+- Gave its name to Guarded Dimensional Chest (servidor.sto).
+- Used baf file instead of bcs to extend ar0307.bcs script.
 - ...
 - Added foreign languages WeiDU prompts whenever possible.
 - Updated items.tra files for compatibility with `GW_UPDATE_ITM_DESCRIPTION_TO_EE` WeiDU function requirements which automatically removes usability restrictions for EE games.
 - Added French translation (Gwendolyne).
 - Added Russian translation (BWP Russian Textpack team).
 - Split setup.tra file into separate thematic files for more comfortable readability
-- TODO Updated and renamed readme file to *darron-readme-spanish.txt*, write a new English readme, then moved them into new "*readme*" folder.
+- TODO Updated and renamed readme file to *darron-readme-spanish.txt*, wrote a new English readme, then moved them into new "*readme*" folder.
 - Removed useless "*backup*" folder.
 - Reorganized mod architecture tree: created or renamed folders to sort files according to their types.
 - Lower cased files.

@@ -3,7 +3,7 @@
 /* ================= *
  *  Usability flags  *
  * ================= */
-@9001 = ~[Uu]tilisable\([ %tab%]+[Ss]eulement+\|[ %tab%]+{Uu]niquement\)?[ %tab%]+[Pp]ar[ %tab%]*:~
+@9001 = ~[Uu]tilisable\([ %tab%]+[Ss]eulement\|[ %tab%]+[Uu]niquement\)?[ %tab%]+[Pp]ar[ %tab%]*:~
 @9002 = ~\([Nn]on[ %tab%]+\|[Ii]n\)[Uu]tilisable[ %tab%]+[Pp]ar[ %tab%]*:~
 
 /* ======= *

@@ -40,7 +40,7 @@ ALWAYS
 	 * --------------------------------------------------------------------------------------------- */
 	ACTION_DEFINE_ARRAY cr_reload BEGIN setup items END
 	// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
-	ACTION_DEFINE_ARRAY cr_noconvert BEGIN insall END
+	ACTION_DEFINE_ARRAY cr_noconvert BEGIN setup END
 	LAF HANDLE_CHARSETS
 		INT_VAR
 			infer_charsets = 1
@@ -86,7 +86,7 @@ LANGUAGE ~Russian~
 
 LANGUAGE ~Simplified Chinese~
          ~schinese~
-         ~darron/lang/schinese/install.tra~
+         ~darron/lang/schinese/setup.tra~
          ~darron/lang/schinese/items.tra~
 
 /* ======================= *
